@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<%@include file="/jsp/pageHead.jsp"%>
 <h2>Add show</h2><br>
 <form name="addShow" action="add.show" method="post" onsubmit="return validateAddShowForm()">
     <br>
@@ -61,9 +62,9 @@
     <input type="submit" value="Submit">
 </form>
 
-<form action="display.shows">
-    <input type="submit" value="Shows" />
-</form>
+<%--<form action="display.shows">--%>
+<%--    <input type="submit" value="Shows" />--%>
+<%--</form>--%>
 
 </body>
 </html>

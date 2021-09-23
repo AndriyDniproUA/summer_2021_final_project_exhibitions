@@ -68,13 +68,13 @@
 </form>
 
 
-<c:if test="${currentUser.role eq 'admin'}">
-    <%--    <a href="add.show">Add show</a><br><br>--%>
-    <form action="add.show">
-        <input type="submit" value="Add new show"/>
-    </form>
-    <br>
-</c:if>
+<%--<c:if test="${currentUser.role eq 'admin'}">--%>
+<%--    &lt;%&ndash;    <a href="add.show">Add show</a><br><br>&ndash;%&gt;--%>
+<%--    <form action="add.show">--%>
+<%--        <input type="submit" value="Add new show"/>--%>
+<%--    </form>--%>
+<%--    <br>--%>
+<%--</c:if>--%>
 
 <%--<form action="login">--%>
 <%--    <input type="submit" value="Login"/>--%>

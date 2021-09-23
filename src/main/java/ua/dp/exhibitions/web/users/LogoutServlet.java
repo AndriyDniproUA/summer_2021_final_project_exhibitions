@@ -20,7 +20,9 @@ public class LogoutServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.removeAttribute("currentUser");
 
-        response.sendRedirect( request.getContextPath() +"/jsp/shows/shows");
+        //response.sendRedirect( request.getContextPath() +"/jsp/shows/shows.jsp");
+        request.getRequestDispatcher("jsp/shows/shows.jsp").forward(request, response);
+
     }
 
 

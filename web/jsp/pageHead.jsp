@@ -25,8 +25,13 @@
                     <input type="submit" value="USERS"/>
                 </form>
             </td>
-        </c:if>
 
+            <td>
+                <form action="add.show">
+                    <input type="submit" value="ADD SHOW"/>
+                </form>
+            </td>
+        </c:if>
         <c:if test="${not empty sessionScope.currentUser}">
             <td>
                 Current user: ${sessionScope.currentUser.login}

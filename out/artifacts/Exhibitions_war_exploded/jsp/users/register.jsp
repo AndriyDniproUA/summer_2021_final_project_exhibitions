@@ -8,9 +8,11 @@
 <head>
     <title>Registration</title>
     <script src="js/validateForms.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
+<%@include file="/jsp/pageHead.jsp"%>
 <h2>Please register</h2><br>
 <form action="register" method="post" onsubmit="return validateLoginForm()">
     <label for="login">Login:</label><br>

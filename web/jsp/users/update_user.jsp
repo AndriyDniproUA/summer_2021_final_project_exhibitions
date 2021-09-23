@@ -7,10 +7,12 @@
 <html>
 <head>
     <title>Update User</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
-<h2>Update user information</h2><br>
+<%@include file="/jsp/pageHead.jsp"%>
+<h2>Update user</h2><br>
 <form action="update.user" method="post">
     <label for="login">Login:</label><br>
     <input type="text" id="login" name="login" value="${user.login}"><br>

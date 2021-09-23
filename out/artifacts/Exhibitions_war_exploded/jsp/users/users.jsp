@@ -8,9 +8,8 @@
     <link rel="stylesheet" type ="text/css" href="css/styles.css">
 </head>
 <body>
-
+<%@include file="/jsp/pageHead.jsp"%>
 <h2>User List</h2>
-
 <table class="styled-table">
     <tr>
     <th>No.</th>
@@ -36,8 +35,8 @@
 </table>
 
 
-<br/>
-<a href="login">Go to login page</a><br>
-<a href="logout">Logout</a>
+<%--<br/>--%>
+<%--<a href="login">Go to login page</a><br>--%>
+<%--<a href="logout">Logout</a>--%>
 </body>
 </html>
