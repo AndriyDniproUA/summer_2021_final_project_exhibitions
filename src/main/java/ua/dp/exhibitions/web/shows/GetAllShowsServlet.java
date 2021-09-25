@@ -4,13 +4,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ua.dp.exhibitions.dao.ShowsDAO;
 import ua.dp.exhibitions.entities.Show;
+import ua.dp.exhibitions.exceptions.DaoException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
 import java.util.List;
 
 public class GetAllShowsServlet extends HttpServlet {
@@ -25,23 +25,21 @@ public class GetAllShowsServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         log.debug("in GetAllShowsServlet doPost");
-
-
-        String orderBy = request.getParameter("orderBy");
-        String dateBegins = request.getParameter("date_begins");
-        String dateEnds = request.getParameter("date_ends");
-
-        //*************************
-        System.out.println("in Servlet order: "+orderBy);
-        System.out.println("begins: "+dateBegins);
-        System.out.println("ends: "+dateBegins);
-        //*****************************
-
         ShowsDAO showsDAO = ShowsDAO.getInstance();
 
-        List<Show> shows = showsDAO.getShows(orderBy,dateBegins,dateEnds);
-        request.setAttribute("shows",shows);
+        String orderBy = request.getParameter("orderBy");
+        String someDate = request.getParameter("someDate");
 
+        List<Show> shows = null;
+        try {
+            shows = showsDAO.getSelectedShows(orderBy,someDate);
+        } catch (DaoException e) {
+            log.trace("Catching DaoException: "+e.getMessage());
+            request.setAttribute("errorMessage",e.getMessage());
+            request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
+        }
+
+        request.setAttribute("shows",shows);
         log.trace("redirecting to shows.jsp");
         request.getRequestDispatcher("jsp/shows/shows.jsp").forward(request, response);
     }

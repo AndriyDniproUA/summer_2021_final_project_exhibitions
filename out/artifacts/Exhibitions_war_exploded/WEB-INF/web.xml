@@ -18,21 +18,28 @@
         <filter-name>CharacterSetFilter</filter-name>
         <filter-class>ua.dp.exhibitions.filters.CharacterSetFilter</filter-class>
     </filter>
-
     <filter-mapping>
         <filter-name>CharacterSetFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-
+//*****************************************************************************************
+    <filter>
+        <filter-name>Admin access only</filter-name>
+        <filter-class>ua.dp.exhibitions.filters.AdminAccessOnlyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Admin access only</filter-name>
+        <url-pattern>/add.show</url-pattern>
+    </filter-mapping>
+    //*********************************************************************************
 
 
     <resource-ref>
-        <description>postgreSQL Datasource example</description>
-        <res-ref-name>jdbc/postgres</res-ref-name>
+        <description>postgreSQL Datasource</description>
+        <res-ref-name>jdbc/exhibitions</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
         <res-auth>Container</res-auth>
     </resource-ref>
-
 
     <servlet>
         <servlet-name>GetUsers</servlet-name>
@@ -113,6 +120,15 @@
     <servlet-mapping>
         <servlet-name>Delete Show</servlet-name>
         <url-pattern>/delete.show</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Buy tickets</servlet-name>
+        <servlet-class>ua.dp.exhibitions.web.shows.BuyTicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Buy tickets</servlet-name>
+        <url-pattern>/buy.ticket</url-pattern>
     </servlet-mapping>
 
 

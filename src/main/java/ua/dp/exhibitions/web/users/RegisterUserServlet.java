@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ua.dp.exhibitions.dao.UserDAO;
 import ua.dp.exhibitions.entities.User;
+import ua.dp.exhibitions.exceptions.DaoException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +16,6 @@ import java.sql.Connection;
 
 public class RegisterUserServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(RegisterUserServlet.class);
-    Connection connection=null;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -31,24 +31,38 @@ public class RegisterUserServlet extends HttpServlet {
         String password = request.getParameter("password");
         log.trace("Attempt to register user with login:" + login);
 
-
         UserDAO userDAO = UserDAO.getInstance();
-        User currentUser =  userDAO.getUser(login);
 
-        if (currentUser!=null) {
+        User currentUser = null;
+        try {
+            currentUser = userDAO.getUser(login);
+        } catch (DaoException e) {
+            log.error("Catching UserDaoException: " + e.getMessage());
+            request.setAttribute("errorMessage", e.getMessage());
+            request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
+        }
+
+        if (currentUser != null) {
             String message = "User with login " + login + "  is already registered!";
             log.trace(message);
 
-            request.setAttribute("message",message);
+            request.setAttribute("message", message);
             request.getRequestDispatcher("jsp/users/warning.jsp").forward(request, response);
         }
 
-        User candidate=new User();
+        User candidate = new User();
         candidate.setLogin(login);
         candidate.setPassword(password);
+        try {
 
-        userDAO.addUser(candidate);
-        currentUser=userDAO.getUser(login);
+            userDAO.addUser(candidate);
+            currentUser = userDAO.getUser(login);
+
+        } catch (DaoException e) {
+            log.error("Catching UserDaoException: " + e.getMessage());
+            request.setAttribute("errorMessage", e.getMessage());
+            request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
+        }
 
         HttpSession session = request.getSession();
 

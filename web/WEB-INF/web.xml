@@ -18,11 +18,21 @@
         <filter-name>CharacterSetFilter</filter-name>
         <filter-class>ua.dp.exhibitions.filters.CharacterSetFilter</filter-class>
     </filter>
-
     <filter-mapping>
         <filter-name>CharacterSetFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+//*****************************************************************************************
+    <filter>
+        <filter-name>Admin access only</filter-name>
+        <filter-class>ua.dp.exhibitions.filters.AdminAccessOnlyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Admin access only</filter-name>
+        <url-pattern>/add.show</url-pattern>
+    </filter-mapping>
+    //*********************************************************************************
+
 
     <resource-ref>
         <description>postgreSQL Datasource</description>
@@ -110,6 +120,15 @@
     <servlet-mapping>
         <servlet-name>Delete Show</servlet-name>
         <url-pattern>/delete.show</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Buy tickets</servlet-name>
+        <servlet-class>ua.dp.exhibitions.web.shows.BuyTicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Buy tickets</servlet-name>
+        <url-pattern>/buy.ticket</url-pattern>
     </servlet-mapping>
 
 

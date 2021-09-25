@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ua.dp.exhibitions.dao.UserDAO;
 import ua.dp.exhibitions.entities.User;
+import ua.dp.exhibitions.exceptions.DaoException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +16,6 @@ import java.sql.Connection;
 
 public class LoginServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(LoginServlet.class);
-    Connection connection = null;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -31,13 +31,22 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         log.trace("Login attempt by user with login " + login);
 
+
+
         User candidate = new User();
         candidate.setLogin(login);
         candidate.setPassword(password);
 
+        User currentUser=null;
         UserDAO userDAO = UserDAO.getInstance();
-        User currentUser = userDAO.getUser(login);
-        log.trace("Login success status:" + candidate.equals(currentUser));
+        try {
+            currentUser = userDAO.getUser(login);
+            log.trace("Login success status:" + candidate.equals(currentUser));
+        } catch (DaoException e){
+            log.error("Catching DaoException: "+e.getMessage());
+            request.setAttribute("errorMessage",e.getMessage());
+            request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
+        }
 
         if (candidate.equals(currentUser)) {
             log.trace("Logged as user:" + currentUser.getLogin() + " role:" + currentUser.getRole());

@@ -13,7 +13,6 @@ import java.sql.Connection;
 
 public class LogoutServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(LogoutServlet.class);
-    Connection connection = null;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

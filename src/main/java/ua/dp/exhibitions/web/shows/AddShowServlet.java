@@ -3,8 +3,10 @@ package ua.dp.exhibitions.web.shows;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ua.dp.exhibitions.dao.ShowsDAO;
+import ua.dp.exhibitions.daoUtil.ShowsDaoUtil;
 import ua.dp.exhibitions.entities.Show;
 import ua.dp.exhibitions.entities.User;
+import ua.dp.exhibitions.exceptions.DaoException;
 import ua.dp.exhibitions.utils.Util;
 
 import javax.servlet.ServletException;
@@ -21,13 +23,13 @@ import java.util.Map;
 
 public class AddShowServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(AddShowServlet.class);
-    Connection connection = null;
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ShowsDAO showsDAO = ShowsDAO.getInstance();
 
-        Map<String, Integer> allRooms = showsDAO.getAllRooms();
+        Map<String, Integer> allRooms = ShowsDaoUtil.getAllRooms();
         request.setAttribute("allRooms", allRooms);
         request.getRequestDispatcher("jsp/shows/add_show.jsp").forward(request, response);
     }
@@ -35,45 +37,45 @@ public class AddShowServlet extends HttpServlet {
     //TODO input validation
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         String message = "";
         User currentUser = (User) request.getSession().getAttribute("currentUser");
 
-
+        message = "Only administrators are allowed to add Shows!";
 
 
         if (currentUser == null || !currentUser.getRole().equals("admin")) {
             log.trace("User was not allowed to add a show");
-            message = "Only administrators are allowed to add Shows!";
             request.setAttribute("message", message);
-            request.getRequestDispatcher("jsp/shows/warning_shows.jsp").forward(request, response);
+            request.getRequestDispatcher("jsp/warning.jsp").forward(request, response);
 
-        } else if (request.getParameterValues("rooms")==null) {
+        } else if (request.getParameterValues("rooms") == null) {
             log.trace("Empty room list was provided");
-
-            ShowsDAO showsDAO = ShowsDAO.getInstance();
-            Map<String, Integer> allRooms = showsDAO.getAllRooms();
+            Map<String, Integer> allRooms = ShowsDaoUtil.getAllRooms();
             request.setAttribute("allRooms", allRooms);
-
             message = "Choose at least one room for the show!";
             request.setAttribute("message", message);
             request.getRequestDispatcher("jsp/shows/add_show.jsp").forward(request, response);
 
-
         } else {
             Show show = new Show();
             String subject = request.getParameter("subject");
-
             show.setSubject(subject);
-            show.setDateBegins(Util.convertStringToLocalDate(request.getParameter("date_begins")));
             show.setDateEnds(Util.convertStringToLocalDate(request.getParameter("date_ends")));
+            show.setDateBegins(Util.convertStringToLocalDate(request.getParameter("date_begins")));
             show.setTimeOpens(LocalTime.parse(request.getParameter("time_opens")));
             show.setTimeCloses(LocalTime.parse(request.getParameter("time_closes")));
             show.setPrice(Double.parseDouble(request.getParameter("price")));
             show.setRooms(request.getParameterValues("rooms"));
-
             ShowsDAO showsDAO = ShowsDAO.getInstance();
-            List<String> validationFeedback = showsDAO.addShow(show);
+
+            List<String> validationFeedback = null;
+            try {
+                validationFeedback = showsDAO.addShow(show);
+            } catch (DaoException e) {
+                log.trace("Catching DaoException: " + e.getMessage());
+                request.setAttribute("errorMessage", e.getMessage());
+                request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
+            }
 
             if (validationFeedback.size() != 0) {
                 request.setAttribute("messageList", validationFeedback);
@@ -83,6 +85,7 @@ public class AddShowServlet extends HttpServlet {
                 request.getRequestDispatcher("jsp/shows/information.jsp").forward(request, response);
             }
         }
+
 
     }
 }

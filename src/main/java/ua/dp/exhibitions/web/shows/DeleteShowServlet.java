@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import ua.dp.exhibitions.dao.ShowsDAO;
 import ua.dp.exhibitions.dao.UserDAO;
 import ua.dp.exhibitions.entities.User;
+import ua.dp.exhibitions.exceptions.DaoException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +16,7 @@ import java.sql.Connection;
 
 public class DeleteShowServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(DeleteShowServlet.class);
-    Connection connection = null;
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -40,17 +41,37 @@ public class DeleteShowServlet extends HttpServlet {
             log.trace("Attempt to delete show with id:" + id);
 
             ShowsDAO showsDAO = ShowsDAO.getInstance();
-            if (showsDAO.deleteShow(id)) {
-                message = "Show " + id + " was successfully removed from the Shows table";
+
+
+
+            //****************************************************************
+            try {
+                showsDAO.deleteShow(id);
+            } catch (DaoException e) {
+                log.trace("Catching DaoException: "+e.getMessage());
+                request.setAttribute("errorMessage",e.getMessage());
+                request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
+            }
+            //***************************************************************
+
+            message = "Show " + id + " was successfully removed from the Shows table";
                 log.trace(message);
                 request.setAttribute("message", message);
                 request.getRequestDispatcher("jsp/shows/information.jsp").forward(request, response);
-            } else {
-                message = "Show id= " + id + " was not removed from the Shows table";
-                log.trace(message);
-                request.setAttribute("message", message);
-                request.getRequestDispatcher("jsp/shows/warning_shows.jsp").forward(request, response);
-            }
+
+
+
+//            if (deleteWasSuccessful) {
+//                message = "Show " + id + " was successfully removed from the Shows table";
+//                log.trace(message);
+//                request.setAttribute("message", message);
+//                request.getRequestDispatcher("jsp/shows/information.jsp").forward(request, response);
+//            } else {
+//                message = "Show id= " + id + " was not removed from the Shows table";
+//                log.trace(message);
+//                request.setAttribute("message", message);
+//                request.getRequestDispatcher("jsp/shows/warning_shows.jsp").forward(request, response);
+//            }
         }
     }
 }
