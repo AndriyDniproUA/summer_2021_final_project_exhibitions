@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.sql.Connection;
 
 public class RegisterUserServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(RegisterUserServlet.class);
@@ -35,20 +34,12 @@ public class RegisterUserServlet extends HttpServlet {
 
         User currentUser = null;
         try {
-            currentUser = userDAO.getUser(login);
+            currentUser = userDAO.getUserByLogin(login);
         } catch (DaoException e) {
             log.error("Catching UserDaoException: " + e.getMessage());
             request.setAttribute("errorMessage", e.getMessage());
             request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
         }
-//
-//        if (currentUser != null) {
-//            String message = "User with login " + login + "  is already registered!";
-//            log.trace(message);
-//
-//            request.setAttribute("message", message);
-//            request.getRequestDispatcher("jsp/users/warning.jsp").forward(request, response);
-//        }
 
         User candidate = new User();
         candidate.setLogin(login);
@@ -56,7 +47,7 @@ public class RegisterUserServlet extends HttpServlet {
 
         try {
             userDAO.addUser(candidate);
-            currentUser = userDAO.getUser(login);
+            currentUser = userDAO.getUserByLogin(login);
 
         } catch (DaoException e) {
             log.error("Catching UserDaoException: " + e.getMessage());

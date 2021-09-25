@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.sql.Connection;
+
 
 public class LoginServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(LoginServlet.class);
@@ -24,7 +24,6 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //request.setCharacterEncoding("Utf-8");
 
         String login = request.getParameter("login");
         String password = request.getParameter("password");
@@ -38,7 +37,7 @@ public class LoginServlet extends HttpServlet {
         UserDAO userDAO = UserDAO.getInstance();
 
         try {
-            currentUser = userDAO.getUser(login);
+            currentUser = userDAO.getUserByLogin(login);
             log.trace("Login success status:" + candidate.equals(currentUser));
 
         } catch (DaoException e){

@@ -1,27 +1,25 @@
 CREATE TABLE shows
 (
-    id       SERIAL,
-    subject    VARCHAR(200) NOT NULL,
---     date_begins VARCHAR(12) NOT NULL,
---     date_ends VARCHAR(12) NOT NULL,
-
-    date_begins TIMESTAMP NOT NULL,
-    date_ends TIMESTAMP NOT NULL,
-    time_opens VARCHAR(12) NOT NULL,
-    time_closes VARCHAR(12) NOT NULL,
-    price NUMERIC(5,2) NOT NULL,
+    id          SERIAL,
+    subject     VARCHAR(200)  NOT NULL,
+    date_begins TIMESTAMP     NOT NULL,
+    date_ends   TIMESTAMP     NOT NULL,
+    time_opens  VARCHAR(12)   NOT NULL,
+    time_closes VARCHAR(12)   NOT NULL,
+    price       NUMERIC(5, 2) NOT NULL,
     PRIMARY KEY (id)
 );
 
 -- Populating table SHOWS
 INSERT INTO shows
-VALUES (DEFAULT, 'Show number 1','2021-09-20','2021-09-27','08:00','17:00',100.00),
-       (DEFAULT, 'Show number 2','2021-09-20','2021-09-27','08:00','17:00',100.00),
-       (DEFAULT, 'Show number 3','2021-09-20','2021-09-27','08:00','17:00',100.00);
+VALUES (DEFAULT, 'Show number 1', '2021-09-20', '2021-09-27', '08:00', '17:00', 100.00),
+       (DEFAULT, 'Show number 2', '2021-09-20', '2021-09-27', '08:00', '17:00', 100.00),
+       (DEFAULT, 'Show number 3', '2021-09-20', '2021-09-27', '08:00', '17:00', 100.00);
 
 
 -- Returning shows list
-SELECT id, subject, date_begins, date_ends, time_opens, time_closes, price FROM shows;
+SELECT id, subject, date_begins, date_ends, time_opens, time_closes, price
+FROM shows;
 
 
 -- Retrieving rooms for the show <id=2>
@@ -29,13 +27,13 @@ SELECT r.room
 FROM shows s
          JOIN shows_rooms s_r ON s.id = s_r.show_id
          JOIN rooms r ON r.id = s_r.room_id
-WHERE s.id=2;
+WHERE s.id = 2;
 
 
 -- Deleting entry with id=1
-DELETE FROM shows WHERE id=1;
-
-
+DELETE
+FROM shows
+WHERE id = 1;
 
 
 

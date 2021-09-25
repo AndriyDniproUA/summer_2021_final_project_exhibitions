@@ -5,7 +5,6 @@ import org.apache.logging.log4j.Logger;
 import ua.dp.exhibitions.dao.ShowsDAO;
 import ua.dp.exhibitions.daoUtil.ShowsDaoUtil;
 import ua.dp.exhibitions.entities.Show;
-import ua.dp.exhibitions.entities.User;
 import ua.dp.exhibitions.exceptions.DaoException;
 import ua.dp.exhibitions.utils.Util;
 
@@ -14,10 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
-import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -27,8 +23,6 @@ public class AddShowServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ShowsDAO showsDAO = ShowsDAO.getInstance();
-
         Map<String, Integer> allRooms = ShowsDaoUtil.getAllRooms();
         request.setAttribute("allRooms", allRooms);
         request.getRequestDispatcher("jsp/shows/add_show.jsp").forward(request, response);
@@ -37,28 +31,7 @@ public class AddShowServlet extends HttpServlet {
     //TODO input validation
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String message = "";
-//        User currentUser = (User) request.getSession().getAttribute("currentUser");
 
-//        message = "Only administrators are allowed to add Shows!";
-
-//        if (currentUser == null || !currentUser.getRole().equals("admin")) {
-
-//        if (false) {
-//            log.trace("User was not allowed to add a show");
-//            request.setAttribute("message", message);
-//            request.getRequestDispatcher("jsp/warning.jsp").forward(request, response);
-
-//        } else if
-//        if (request.getParameterValues("rooms") == null) {
-//            log.trace("Empty room list was provided");
-//            Map<String, Integer> allRooms = ShowsDaoUtil.getAllRooms();
-//            request.setAttribute("allRooms", allRooms);
-//            String message = "Choose at least one room for the show!";
-//            request.setAttribute("message", message);
-//            request.getRequestDispatcher("jsp/shows/add_show.jsp").forward(request, response);
-
-//        } else {
             Show show = new Show();
             String subject = request.getParameter("subject");
             show.setSubject(subject);
@@ -88,4 +61,3 @@ public class AddShowServlet extends HttpServlet {
             }
         }
     }
-//}

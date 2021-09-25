@@ -80,6 +80,34 @@ public class ShowsDAO {
         return shows;
     }
 
+    public Show getShowById(int id) throws DaoException{
+        log.debug("Calling getShowById in ShowsDAO");
+
+        String sql = "SELECT id, subject, date_begins, date_ends, time_opens, time_closes, price FROM shows WHERE id=?";
+
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        Show show=null;
+
+        try {
+            con = CustomDataSource.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.setInt(1,id);
+            rs = ps.executeQuery();
+            show = ShowsDaoUtil.mapShows(rs).get(0);
+        } catch (SQLException e) {
+            log.error(e.getMessage());
+            throw new DaoException("Failed to find the show in the database!",e);
+        } finally {
+            DbUtil.close(rs);
+            DbUtil.close(ps);
+            DbUtil.close(con);
+        }
+        return show;
+    }
+
+
     public List<String> addShow(Show show) throws DaoException{
         Connection con = null;
         PreparedStatement ps = null;

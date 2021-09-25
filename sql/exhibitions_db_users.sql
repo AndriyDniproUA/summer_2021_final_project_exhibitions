@@ -4,18 +4,19 @@ CREATE TABLE users
     id       SERIAL,
     login    VARCHAR(20) NOT NULL UNIQUE,
     password VARCHAR(20) NOT NULL,
-    role     INT,
+    role     INT NOT NULL,
+    balance  NUMERIC(6,2) NOT NULL,
     PRIMARY KEY (id),
     CONSTRAINT fk_role FOREIGN KEY (role) REFERENCES roles (id)
         ON DELETE SET NULL
 );
 
 --Populating table USERS
-INSERT INTO users (login, password, role)
-VALUES ('nick', '111', 1),
-       ('mike', '222', 2),
-       ('john', '333', 3),
-       ('Василь', '444', 1);
+INSERT INTO users (login, password, role, balance)
+VALUES ('nick', '111', 1, 500.00),
+       ('mike', '222', 2, 500.00),
+       ('john', '333', 2, 500.00),
+       ('Василь', '444', 2, 500.00 );
 
 
 -- GETTING ALL USERS

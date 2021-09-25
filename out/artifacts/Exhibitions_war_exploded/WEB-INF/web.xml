@@ -13,9 +13,9 @@
         <res-auth>Container</res-auth>
     </resource-ref>
 
-    <welcome-file-list>
-        <welcome-file>/jsp/shows/shows.jsp</welcome-file>
-    </welcome-file-list>
+<!--    <welcome-file-list>-->
+<!--        <welcome-file>/jsp/shows/shows.jsp</welcome-file>-->
+<!--    </welcome-file-list>-->
 
     <session-config>
         <session-timeout>30</session-timeout>
@@ -103,6 +103,16 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>Personal Cabinet</servlet-name>
+        <servlet-class>ua.dp.exhibitions.web.users.PersonalCabinetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Personal Cabinet</servlet-name>
+        <url-pattern>/personal.cabinet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
         <servlet-name>GetUsers</servlet-name>
         <servlet-class>ua.dp.exhibitions.web.users.GetAllUsersServlet</servlet-class>
     </servlet>
@@ -137,12 +147,13 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Display all Shows</servlet-name>
+        <url-pattern>/</url-pattern>
         <url-pattern>/display.shows</url-pattern>
     </servlet-mapping>
 
     <servlet>
         <servlet-name>Buy tickets</servlet-name>
-        <servlet-class>ua.dp.exhibitions.web.shows.BuyTicketServlet</servlet-class>
+        <servlet-class>ua.dp.exhibitions.web.tickets.BuyTicketServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Buy tickets</servlet-name>

@@ -101,7 +101,7 @@ public class ShowsDaoUtil {
             ps.setInt(1, id);
 
             rs = ps.executeQuery();
-            return ShowsDaoUtil.mapRooms(rs);
+            return mapRooms(rs);
 
         } catch (SQLException throwables) {
             log.error(throwables.getStackTrace() + "->Message:" + throwables.getMessage());
@@ -145,7 +145,7 @@ public class ShowsDaoUtil {
     public static void bookRooms(Show show, Connection con) {
         PreparedStatement ps = null;
 
-        Map<String, Integer> rooms = ShowsDaoUtil.getAllRooms();
+        Map<String, Integer> rooms = getAllRooms();
         String[] showRooms = show.getRooms();
 
         String sql = "INSERT INTO shows_rooms\n" +
@@ -179,6 +179,4 @@ public class ShowsDaoUtil {
             log.error(e.getStackTrace() + " Message:" + e.getMessage());
         }
     }
-
-
 }

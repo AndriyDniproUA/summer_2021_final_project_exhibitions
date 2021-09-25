@@ -47,9 +47,9 @@
             <c:if test="${currentUser.role eq 'user'}">
                 <td>
                     <form name="buyTicket" action="buy.ticket" method="post">
-                        <select id="number" name="number">
+                        <select id="number" name="quantity">
                             <option value="1" selected="selected">1</option>
-                            <option value="2" >2</option>
+                            <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                         </select>
@@ -58,11 +58,6 @@
                     </form>
                 </td>
             </c:if>
-
-
-
-
-
         </tr>
     </c:forEach>
 </table>
@@ -70,48 +65,38 @@
 
 
 <form action="display.shows" method="post">
+    <table>
+        <tr>
+            <td>
+                Choose ordering of the show list:
+            </td>
+            <td>
+                <input type="radio" id="bySubject" name="orderBy" value="bySubject">
+                <label for="bySubject">by subject</label>
 
-    Choose ordering of the show list:
-    <input type="radio" id="bySubject" name="orderBy" value="bySubject">
-    <label for="bySubject">by subject</label>
+                <input type="radio" id="byDate" name="orderBy" value="byDate">
+                <label for="byDate">by date</label>
 
-    <input type="radio" id="byDate" name="orderBy" value="byDate">
-    <label for="byDate">by date</label>
-
-    <input type="radio" id="byPrice" name="orderBy" value="byPrice">
-    <label for="byPrice">by price</label>
-
-    <%--        <label for="date_begins">Start date:</label>--%>
-    <%--        <input type="date" id="date_begins" name="date_begins">--%>
-    <%--        <label for="date_ends">End date:</label>--%>
-    <%--        <input type="date" id="date_ends" name="date_ends">--%>
-
-    <input type="date" id="someDate" name="someDate">
-
-    <input type="submit" value="Submit"/>
+                <input type="radio" id="byPrice" name="orderBy" value="byPrice">
+                <label for="byPrice">by price</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Select the date:
+            </td>
+            <td>
+                <input type="date" id="someDate" name="someDate">
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <input type="submit" value="Submit"/>
+            </td>
+        </tr>
+    </table>
 </form>
-
-
-<%--<c:if test="${currentUser.role eq 'admin'}">--%>
-<%--    &lt;%&ndash;    <a href="add.show">Add show</a><br><br>&ndash;%&gt;--%>
-<%--    <form action="add.show">--%>
-<%--        <input type="submit" value="Add new show"/>--%>
-<%--    </form>--%>
-<%--    <br>--%>
-<%--</c:if>--%>
-
-<%--<form action="login">--%>
-<%--    <input type="submit" value="Login"/>--%>
-<%--</form>--%>
-<%--<br>--%>
-
-<%--<form action="logout">--%>
-<%--    <input type="submit" value="Logout"/>--%>
-<%--</form>--%>
-<%--<br>--%>
-
-
-<%--<a href="login">Go to login page</a><br><br>--%>
-<%--<a href="logout">Logout</a>--%>
 </body>
 </html>

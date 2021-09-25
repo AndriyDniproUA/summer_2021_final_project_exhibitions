@@ -7,6 +7,15 @@ public class User {
     private String login;
     private String password;
     private String role;
+    private double balance;
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
 
     public int getId() {
         return id;

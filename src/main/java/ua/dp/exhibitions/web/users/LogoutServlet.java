@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.sql.Connection;
 
 public class LogoutServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(LogoutServlet.class);
@@ -19,9 +18,8 @@ public class LogoutServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.removeAttribute("currentUser");
 
-        //response.sendRedirect( request.getContextPath() +"/jsp/shows/shows.jsp");
-        request.getRequestDispatcher("jsp/shows/shows.jsp").forward(request, response);
-
+//        request.getRequestDispatcher("jsp/shows/shows.jsp").forward(request, response);
+        request.getRequestDispatcher("display.shows").forward(request, response);
     }
 
 
