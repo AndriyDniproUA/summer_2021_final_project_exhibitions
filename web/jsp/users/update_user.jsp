@@ -25,7 +25,7 @@
     <label for="roles">Select new role:</label>
     <select id="roles" name="role">
         <option value="1">admin</option>
-        <option value="2">user</option>
+        <option value="2" selected="selected">user</option>
     </select>
     <input type="submit" value="Submit">
 </form>

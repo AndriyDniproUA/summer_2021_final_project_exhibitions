@@ -10,7 +10,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-import java.sql.*;
 import java.util.List;
 
 public class GetAllUsersServlet extends HttpServlet {
@@ -35,10 +34,7 @@ public class GetAllUsersServlet extends HttpServlet {
         }
     }
 
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        log.trace("Calling Servlet class doPost method");
-        response.getWriter().println("Hello");
     }
 }

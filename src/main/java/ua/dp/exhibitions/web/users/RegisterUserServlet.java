@@ -41,20 +41,20 @@ public class RegisterUserServlet extends HttpServlet {
             request.setAttribute("errorMessage", e.getMessage());
             request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
         }
-
-        if (currentUser != null) {
-            String message = "User with login " + login + "  is already registered!";
-            log.trace(message);
-
-            request.setAttribute("message", message);
-            request.getRequestDispatcher("jsp/users/warning.jsp").forward(request, response);
-        }
+//
+//        if (currentUser != null) {
+//            String message = "User with login " + login + "  is already registered!";
+//            log.trace(message);
+//
+//            request.setAttribute("message", message);
+//            request.getRequestDispatcher("jsp/users/warning.jsp").forward(request, response);
+//        }
 
         User candidate = new User();
         candidate.setLogin(login);
         candidate.setPassword(password);
-        try {
 
+        try {
             userDAO.addUser(candidate);
             currentUser = userDAO.getUser(login);
 
@@ -67,6 +67,6 @@ public class RegisterUserServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         session.setAttribute("currentUser", currentUser);
-        request.getRequestDispatcher("jsp/users/welcome.jsp").forward(request, response);
+        request.getRequestDispatcher("jsp/welcome.jsp").forward(request, response);
     }
 }

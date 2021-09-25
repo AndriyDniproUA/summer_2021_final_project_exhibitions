@@ -37,26 +37,28 @@ public class AddShowServlet extends HttpServlet {
     //TODO input validation
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String message = "";
-        User currentUser = (User) request.getSession().getAttribute("currentUser");
+//        String message = "";
+//        User currentUser = (User) request.getSession().getAttribute("currentUser");
 
-        message = "Only administrators are allowed to add Shows!";
+//        message = "Only administrators are allowed to add Shows!";
 
+//        if (currentUser == null || !currentUser.getRole().equals("admin")) {
 
-        if (currentUser == null || !currentUser.getRole().equals("admin")) {
-            log.trace("User was not allowed to add a show");
-            request.setAttribute("message", message);
-            request.getRequestDispatcher("jsp/warning.jsp").forward(request, response);
+//        if (false) {
+//            log.trace("User was not allowed to add a show");
+//            request.setAttribute("message", message);
+//            request.getRequestDispatcher("jsp/warning.jsp").forward(request, response);
 
-        } else if (request.getParameterValues("rooms") == null) {
-            log.trace("Empty room list was provided");
-            Map<String, Integer> allRooms = ShowsDaoUtil.getAllRooms();
-            request.setAttribute("allRooms", allRooms);
-            message = "Choose at least one room for the show!";
-            request.setAttribute("message", message);
-            request.getRequestDispatcher("jsp/shows/add_show.jsp").forward(request, response);
+//        } else if
+//        if (request.getParameterValues("rooms") == null) {
+//            log.trace("Empty room list was provided");
+//            Map<String, Integer> allRooms = ShowsDaoUtil.getAllRooms();
+//            request.setAttribute("allRooms", allRooms);
+//            String message = "Choose at least one room for the show!";
+//            request.setAttribute("message", message);
+//            request.getRequestDispatcher("jsp/shows/add_show.jsp").forward(request, response);
 
-        } else {
+//        } else {
             Show show = new Show();
             String subject = request.getParameter("subject");
             show.setSubject(subject);
@@ -79,13 +81,11 @@ public class AddShowServlet extends HttpServlet {
 
             if (validationFeedback.size() != 0) {
                 request.setAttribute("messageList", validationFeedback);
-                request.getRequestDispatcher("jsp/shows/warning_shows.jsp").forward(request, response);
+                request.getRequestDispatcher("jsp/warning.jsp").forward(request, response);
             } else {
                 request.setAttribute("message", "Show " + subject + " was added successfully to the shows database");
-                request.getRequestDispatcher("jsp/shows/information.jsp").forward(request, response);
+                request.getRequestDispatcher("jsp/information.jsp").forward(request, response);
             }
         }
-
-
     }
-}
+//}

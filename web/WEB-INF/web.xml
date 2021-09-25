@@ -6,6 +6,13 @@
 
     <display-name>Exhibitions</display-name>
 
+    <resource-ref>
+        <description>postgreSQL Datasource</description>
+        <res-ref-name>jdbc/exhibitions</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
     <welcome-file-list>
         <welcome-file>/jsp/shows/shows.jsp</welcome-file>
     </welcome-file-list>
@@ -14,6 +21,8 @@
         <session-timeout>30</session-timeout>
     </session-config>
 
+
+    <!--            *********************   FILTERS   ********************             -->
     <filter>
         <filter-name>CharacterSetFilter</filter-name>
         <filter-class>ua.dp.exhibitions.filters.CharacterSetFilter</filter-class>
@@ -22,7 +31,7 @@
         <filter-name>CharacterSetFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-//*****************************************************************************************
+
     <filter>
         <filter-name>Admin access only</filter-name>
         <filter-class>ua.dp.exhibitions.filters.AdminAccessOnlyFilter</filter-class>
@@ -30,24 +39,31 @@
     <filter-mapping>
         <filter-name>Admin access only</filter-name>
         <url-pattern>/add.show</url-pattern>
+        <url-pattern>/delete.show</url-pattern>
+        <url-pattern>/delete.user</url-pattern>
+        <url-pattern>/update.user</url-pattern>
+        <url-pattern>/users</url-pattern>
     </filter-mapping>
-    //*********************************************************************************
+
+    <filter>
+        <filter-name>Add show input validation</filter-name>
+        <filter-class>ua.dp.exhibitions.filters.AddShowServletInputValidation</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Add show input validation</filter-name>
+        <url-pattern>/add.show</url-pattern>
+    </filter-mapping>
 
 
-    <resource-ref>
-        <description>postgreSQL Datasource</description>
-        <res-ref-name>jdbc/exhibitions</res-ref-name>
-        <res-type>javax.sql.DataSource</res-type>
-        <res-auth>Container</res-auth>
-    </resource-ref>
+    <!-- *********************  USERS servlets  ********************             -->
 
     <servlet>
-        <servlet-name>GetUsers</servlet-name>
-        <servlet-class>ua.dp.exhibitions.web.users.GetAllUsersServlet</servlet-class>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>ua.dp.exhibitions.web.users.RegisterUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>GetUsers</servlet-name>
-        <url-pattern>/users</url-pattern>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/register</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -69,15 +85,6 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>Register</servlet-name>
-        <servlet-class>ua.dp.exhibitions.web.users.RegisterUserServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Register</servlet-name>
-        <url-pattern>/register</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
         <servlet-name>Delete User</servlet-name>
         <servlet-class>ua.dp.exhibitions.web.users.DeleteUserServlet</servlet-class>
     </servlet>
@@ -96,13 +103,15 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>Display all Shows</servlet-name>
-        <servlet-class>ua.dp.exhibitions.web.shows.GetAllShowsServlet</servlet-class>
+        <servlet-name>GetUsers</servlet-name>
+        <servlet-class>ua.dp.exhibitions.web.users.GetAllUsersServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Display all Shows</servlet-name>
-        <url-pattern>/display.shows</url-pattern>
+        <servlet-name>GetUsers</servlet-name>
+        <url-pattern>/users</url-pattern>
     </servlet-mapping>
+
+    <!-- *********************  SHOWS servlets  ********************            -->
 
     <servlet>
         <servlet-name>Add Show</servlet-name>
@@ -123,6 +132,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>Display all Shows</servlet-name>
+        <servlet-class>ua.dp.exhibitions.web.shows.GetAllShowsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Display all Shows</servlet-name>
+        <url-pattern>/display.shows</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>Buy tickets</servlet-name>
         <servlet-class>ua.dp.exhibitions.web.shows.BuyTicketServlet</servlet-class>
     </servlet>
@@ -130,7 +148,6 @@
         <servlet-name>Buy tickets</servlet-name>
         <url-pattern>/buy.ticket</url-pattern>
     </servlet-mapping>
-
 
 
 </web-app>

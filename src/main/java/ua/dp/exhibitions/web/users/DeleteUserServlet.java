@@ -24,29 +24,50 @@ public class DeleteUserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String login = request.getParameter("login");
+        log.trace("Attempt to delete user with login:" + login);
+
+        UserDAO userDAO = UserDAO.getInstance();
+
+        try {
+            userDAO.deleteUser(login);
+        } catch (DaoException e) {
+            log.error("Catching DaoException: " + e.getMessage());
+            request.setAttribute("errorMessage", e.getMessage());
+            request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
+        }
+
+        String message = "User " + login + " was successfully removed from the Users table";
+        log.trace(message);
+        request.setAttribute("message", message);
+        request.getRequestDispatcher("jsp/users/information.jsp").forward(request, response);
+
+
         //request.setCharacterEncoding("Utf-8");
-        String message = "";
-        User currentUser = (User) request.getSession().getAttribute("currentUser");
+//        String message = "";
+//        User currentUser = (User) request.getSession().getAttribute("currentUser");
 
-        if (currentUser == null || !currentUser.getRole().equals("admin")) {
-            log.trace("User was not allowed to delete a user");
-            message = "Only administrator are allowed to delete Users!";
-            request.setAttribute("message", message);
-            request.getRequestDispatcher("jsp/users/warning.jsp").forward(request, response);
+//        if (currentUser == null || !currentUser.getRole().equals("admin")) {
+//
+//        if (false) {
+//            log.trace("User was not allowed to delete a user");
+//            message = "Only administrator are allowed to delete Users!";
+//            request.setAttribute("message", message);
+//            request.getRequestDispatcher("jsp/users/warning.jsp").forward(request, response);
 
-        } else {
-            String login = request.getParameter("login");
-            log.trace("Attempt to delete user with login:" + login);
-
-            UserDAO userDAO = UserDAO.getInstance();
-
-            try {
-                userDAO.deleteUser(login);
-            } catch (DaoException e) {
-                log.error("Catching DaoException: " + e.getMessage());
-                request.setAttribute("errorMessage", e.getMessage());
-                request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
-            }
+//        } else {
+//            String login = request.getParameter("login");
+//            log.trace("Attempt to delete user with login:" + login);
+//
+//            UserDAO userDAO = UserDAO.getInstance();
+//
+//            try {
+//                userDAO.deleteUser(login);
+//            } catch (DaoException e) {
+//                log.error("Catching DaoException: " + e.getMessage());
+//                request.setAttribute("errorMessage", e.getMessage());
+//                request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
+//            }
 
 //            if (userDAO.deleteUser(login)) {
 //                message = "User " + login + " was successfully removed from the Users table";
@@ -59,11 +80,11 @@ public class DeleteUserServlet extends HttpServlet {
 //                request.setAttribute("message", message);
 //                request.getRequestDispatcher("jsp/users/warning.jsp").forward(request, response);
 
-            message = "User " + login + " was successfully removed from the Users table";
-            log.trace(message);
-            request.setAttribute("message", message);
-            request.getRequestDispatcher("jsp/users/information.jsp").forward(request, response);
+//            message = "User " + login + " was successfully removed from the Users table";
+//            log.trace(message);
+//            request.setAttribute("message", message);
+//            request.getRequestDispatcher("jsp/users/information.jsp").forward(request, response);
         }
     }
 
-}
+//}

@@ -104,7 +104,7 @@ public class UserDAO {
 
         } catch (SQLException e) {
             log.error(e.getMessage());
-            throw new DaoException("Unable to add user: "+user.getLogin()+" to the database!",e);
+            throw new DaoException("User: "+user.getLogin()+" already exists!",e);
 
         } finally {
             DbUtil.close(rs);

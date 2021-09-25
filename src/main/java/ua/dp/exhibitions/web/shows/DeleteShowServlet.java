@@ -27,37 +27,61 @@ public class DeleteShowServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String message = "";
-        User currentUser = (User) request.getSession().getAttribute("currentUser");
+//        String message = "";
+//        User currentUser = (User) request.getSession().getAttribute("currentUser");
 
-        if (currentUser == null || !currentUser.getRole().equals("admin")) {
-            log.trace("User was not allowed to delete a show");
-            message = "Only administrator are allowed to delete Shows!";
-            request.setAttribute("message", message);
-            request.getRequestDispatcher("jsp/shows/warning_shows.jsp").forward(request, response);
+        int id = Integer.parseInt(request.getParameter("id"));
+        log.trace("Attempt to delete show with id:" + id);
 
-        } else {
-            int id = Integer.parseInt(request.getParameter("id"));
-            log.trace("Attempt to delete show with id:" + id);
+        ShowsDAO showsDAO = ShowsDAO.getInstance();
+        try {
+            showsDAO.deleteShow(id);
+        } catch (DaoException e) {
+            log.trace("Catching DaoException: "+e.getMessage());
+            request.setAttribute("errorMessage",e.getMessage());
+            request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
+        }
 
-            ShowsDAO showsDAO = ShowsDAO.getInstance();
+        String message = "Show " + id + " was successfully removed from the Shows table";
+        log.trace(message);
+        request.setAttribute("message", message);
+        request.getRequestDispatcher("jsp/information.jsp").forward(request, response);
 
 
 
-            //****************************************************************
-            try {
-                showsDAO.deleteShow(id);
-            } catch (DaoException e) {
-                log.trace("Catching DaoException: "+e.getMessage());
-                request.setAttribute("errorMessage",e.getMessage());
-                request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
-            }
-            //***************************************************************
 
-            message = "Show " + id + " was successfully removed from the Shows table";
-                log.trace(message);
-                request.setAttribute("message", message);
-                request.getRequestDispatcher("jsp/shows/information.jsp").forward(request, response);
+
+
+
+
+//        if (currentUser == null || !currentUser.getRole().equals("admin")) {
+//            log.trace("User was not allowed to delete a show");
+//            message = "Only administrator are allowed to delete Shows!";
+//            request.setAttribute("message", message);
+//            request.getRequestDispatcher("jsp/shows/warning_shows.jsp").forward(request, response);
+
+//        } else {
+//            int id = Integer.parseInt(request.getParameter("id"));
+//            log.trace("Attempt to delete show with id:" + id);
+//
+//            ShowsDAO showsDAO = ShowsDAO.getInstance();
+//
+//
+//
+//            //****************************************************************
+//            try {
+//                showsDAO.deleteShow(id);
+//            } catch (DaoException e) {
+//                log.trace("Catching DaoException: "+e.getMessage());
+//                request.setAttribute("errorMessage",e.getMessage());
+//                request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
+//            }
+//            //***************************************************************
+//
+//            message = "Show " + id + " was successfully removed from the Shows table";
+//                log.trace(message);
+//                request.setAttribute("message", message);
+//                request.getRequestDispatcher("jsp/shows/information.jsp").forward(request, response);
 
 
 
@@ -74,4 +98,4 @@ public class DeleteShowServlet extends HttpServlet {
 //            }
         }
     }
-}
+//}

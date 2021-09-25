@@ -22,16 +22,13 @@ public class LoginServlet extends HttpServlet {
         request.getRequestDispatcher("jsp/users/login.jsp").forward(request, response);
     }
 
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("Utf-8");
+        //request.setCharacterEncoding("Utf-8");
 
         String login = request.getParameter("login");
         String password = request.getParameter("password");
         log.trace("Login attempt by user with login " + login);
-
-
 
         User candidate = new User();
         candidate.setLogin(login);
@@ -39,9 +36,11 @@ public class LoginServlet extends HttpServlet {
 
         User currentUser=null;
         UserDAO userDAO = UserDAO.getInstance();
+
         try {
             currentUser = userDAO.getUser(login);
             log.trace("Login success status:" + candidate.equals(currentUser));
+
         } catch (DaoException e){
             log.error("Catching DaoException: "+e.getMessage());
             request.setAttribute("errorMessage",e.getMessage());
@@ -52,10 +51,11 @@ public class LoginServlet extends HttpServlet {
             log.trace("Logged as user:" + currentUser.getLogin() + " role:" + currentUser.getRole());
             HttpSession session = request.getSession();
             session.setAttribute("currentUser", currentUser);
-            request.getRequestDispatcher("jsp/users/welcome.jsp").forward(request, response);
+            request.getRequestDispatcher("jsp/welcome.jsp").forward(request, response);
+
         } else {
             request.setAttribute("message","Please check your login and password!");
-            request.getRequestDispatcher("jsp/users/warning.jsp").forward(request, response);
+            request.getRequestDispatcher("jsp/warning.jsp").forward(request, response);
         }
     }
 }
