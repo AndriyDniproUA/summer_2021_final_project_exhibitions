@@ -87,7 +87,8 @@ public class TicketsDAO {
         User user =userDAO.getUserById(userId);
 
         if  ((user.getBalance()-show.getPrice()*quantity)<0){
-            throw new DaoException("We are sorry!\n Your balance:"+user.getBalance()+" is no sufficient to purchase the selected tickets!");
+            throw new DaoException("We are sorry!\n Your balance:"
+                    +user.getBalance()+" is no sufficient to purchase the selected tickets!");
         }
 
         PreparedStatement ps = null;
@@ -115,7 +116,7 @@ public class TicketsDAO {
                 "FROM tickets t\n" +
                 "         JOIN users u ON t.user_id = u.id\n" +
                 "         JOIN shows s ON t.show_id = s.id\n" +
-                "WHERE u.id = ?;";
+                "WHERE u.id = ?";
 
         Connection con = null;
         PreparedStatement ps = null;
@@ -140,7 +141,38 @@ public class TicketsDAO {
         return tickets;
     }
 
+    public int countTicketsByShowId(int show_id) throws DaoException{
+        log.debug("Calling countTicketsByShowId in TicketsDAO");
+
+        String sql="SELECT SUM(quantity) FROM tickets t JOIN shows s ON t.show_id = s.id WHERE s.id = ?";
+
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        int totalNumber=0;
+
+        try {
+            con = CustomDataSource.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, show_id);
+            rs = ps.executeQuery();
 
 
+            if (rs.next()){
+                totalNumber=rs.getInt(1);
+            }
 
+
+        } catch (SQLException e) {
+            log.error(e.getMessage());
+            throw new DaoException("Failed to count tickets for the show! "+e.getMessage(),e);
+        } finally {
+            DbUtil.close(rs);
+            DbUtil.close(ps);
+            DbUtil.close(con);
+        }
+
+        /qreturn totalNumber;
+    }
 }

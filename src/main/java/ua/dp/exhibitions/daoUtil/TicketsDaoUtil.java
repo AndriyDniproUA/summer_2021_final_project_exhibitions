@@ -28,8 +28,8 @@ public class TicketsDaoUtil {
             ticket.setShow_id(rs.getInt("show_id"));
             ticket.setDate(((Timestamp) rs.getObject("date")).toLocalDateTime().toLocalDate());
             ticket.setSubject(rs.getString("subject"));
-            ticket.setQuantity(rs.getDouble("quantity"));
-            ticket.setQuantity(rs.getDouble("cost"));
+            ticket.setQuantity(rs.getInt("quantity"));
+            ticket.setCost(rs.getDouble("cost"));
 
             tickets.add(ticket);
         }

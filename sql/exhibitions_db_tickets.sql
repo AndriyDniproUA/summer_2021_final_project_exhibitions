@@ -25,6 +25,15 @@ FROM tickets t
 WHERE u.id = 2;
 
 
+-- -- Counting tickets for a specific show by ID <id=17>
+-- SELECT t.show_id, t.quantity
+
+SELECT SUM(quantity)
+FROM tickets t JOIN shows s ON t.show_id = s.id
+WHERE s.id = 17;
+
+
+
 -- --Retrieving room list for shows
 -- select room from(
 -- SELECT s.id, s.subject, r.room

@@ -8,7 +8,7 @@ public class Ticket {
     private int show_id;
     private LocalDate date;
     private String subject;
-    private double quantity;
+    private int quantity;
     private double cost;
 
     public int getOrder_id() {
@@ -47,7 +47,7 @@ public class Ticket {
         return quantity;
     }
 
-    public void setQuantity(double quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 

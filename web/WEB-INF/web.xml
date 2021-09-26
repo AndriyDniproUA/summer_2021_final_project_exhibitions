@@ -92,10 +92,6 @@
         <url-pattern>/personal.cabinet.update</url-pattern>
     </servlet-mapping>
 
-
-
-
-
     <!-- *********************  USERS servlets  ********************             -->
 
     <servlet>
@@ -153,7 +149,6 @@
     </servlet-mapping>
 
     <!-- *********************  SHOWS servlets  ********************            -->
-
     <servlet>
         <servlet-name>Add Show</servlet-name>
         <servlet-class>ua.dp.exhibitions.web.shows.AddShowServlet</servlet-class>
@@ -181,6 +176,17 @@
         <url-pattern>/</url-pattern>
         <url-pattern>/display.shows</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Display A Single Show</servlet-name>
+        <servlet-class>ua.dp.exhibitions.web.shows.GetSingleShowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Display A Single Show</servlet-name>
+        <url-pattern>/display.single.show</url-pattern>
+    </servlet-mapping>
+
+
 
     <servlet>
         <servlet-name>Buy tickets</servlet-name>

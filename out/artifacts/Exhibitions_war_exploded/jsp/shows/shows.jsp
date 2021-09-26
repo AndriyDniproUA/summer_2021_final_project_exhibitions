@@ -9,6 +9,7 @@
 </head>
 <body>
 <%@include file="/jsp/pageHead.jsp" %>
+
 <h3>Shows List</h3>
 <table class="styled-table">
     <tr>
@@ -21,6 +22,8 @@
         <th>Ticket price</th>
         <th>Rooms</th>
         <c:if test="${currentUser.role eq 'admin'}">
+            <th>Tickets sold</th>
+            <th>Total sum</th>
             <th>Delete</th>
         </c:if>
         <c:if test="${currentUser.role eq 'user'}">
@@ -42,6 +45,8 @@
 
 
             <c:if test="${currentUser.role eq 'admin'}">
+                <td>${show.ticketsSold}</td>
+                <td>${show.total}</td>
                 <td><a href="delete.show?id=${show.id}">delete</a></td>
             </c:if>
             <c:if test="${currentUser.role eq 'user'}">

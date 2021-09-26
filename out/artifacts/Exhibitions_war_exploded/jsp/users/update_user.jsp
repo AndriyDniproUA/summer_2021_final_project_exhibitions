@@ -42,6 +42,10 @@
             </select></td>
         </tr>
         <tr>
+            <td> Current balance</td>
+            <td>${user.balance}</td>
+        </tr>
+        <tr>
             <td> Deposit user account:</td>
             <td>
                 <select id="deposit" name="deposit">
@@ -53,7 +57,7 @@
                 </select>
             </td>
         </tr>
-        <tr><td> </td></tr>
+        <tr><td></td><td></td></tr>
         <tr>
             <td></td>
             <td><input type="submit" value="Submit"></td>

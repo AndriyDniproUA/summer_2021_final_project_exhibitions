@@ -11,8 +11,26 @@ public class Show {
     private LocalDate dateEnds;
     private LocalTime timeOpens;
     private LocalTime timeCloses;
+    private int ticketsSold;
     private double price;
+    private double total;
     private String[] rooms;
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
+    public int getTicketsSold() {
+        return ticketsSold;
+    }
+
+    public void setTicketsSold(int ticketsSold) {
+        this.ticketsSold = ticketsSold;
+    }
 
     public String[] getRooms() {
         return rooms;

@@ -30,10 +30,11 @@
         <c:forEach var="ticket" items="${tickets}" varStatus="theCount">
     <tr>
         <td>${ticket.order_id}</td>
-        <td>${ticket.subject}</td>  make reference!!!!!
-        <td>${show.date}</td>
-    <td>${show.quantity}</td>
-    <td>${show.cost}</td>
+        <td><a href="display.single.show?show_id=${ticket.show_id}">${ticket.subject}</a></td>
+
+        <td>${ticket.date}</td>
+        <td>${ticket.quantity}</td>
+        <td>${ticket.cost}</td>
 
     </tr>
     </c:forEach>

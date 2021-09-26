@@ -3,8 +3,10 @@ package ua.dp.exhibitions.daoUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ua.dp.exhibitions.dao.ShowsDAO;
+import ua.dp.exhibitions.dao.TicketsDAO;
 import ua.dp.exhibitions.datasource.CustomDataSource;
 import ua.dp.exhibitions.entities.Show;
+import ua.dp.exhibitions.exceptions.DaoException;
 import ua.dp.exhibitions.utils.DbUtil;
 
 import java.sql.*;
@@ -61,6 +63,9 @@ public class ShowsDaoUtil {
     }
 
     public static List<Show> mapShows(ResultSet rs) throws SQLException {
+        TicketsDAO ticketsDAO=TicketsDAO.getInstance();
+
+
         log.debug("Calling mapShows in ShowsDAOUtil");
         List<Show> shows = new ArrayList<>();
 
@@ -74,8 +79,20 @@ public class ShowsDaoUtil {
             show.setDateEnds(((Timestamp) rs.getObject("date_ends")).toLocalDateTime().toLocalDate());
             show.setTimeOpens(LocalTime.parse(rs.getString("time_opens")));
             show.setTimeCloses(LocalTime.parse(rs.getString("time_closes")));
-            show.setPrice(rs.getDouble("price"));
+
+            double price=rs.getDouble("price");
+            show.setPrice(price);
             show.setRooms(getShowRooms(id));
+
+            int ticketsSold=0;
+            try {
+                ticketsSold=ticketsDAO.countTicketsByShowId(id);
+                show.setTicketsSold(ticketsSold);
+            } catch (DaoException e) {
+                log.debug(e.getMessage());
+            }
+            show.setTotal(price*ticketsSold);
+
             shows.add(show);
         }
         return shows;
