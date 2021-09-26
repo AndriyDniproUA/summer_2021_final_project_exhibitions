@@ -17,14 +17,12 @@ CREATE TABLE tickets
 INSERT INTO tickets (user_id, show_id, quantity)
 VALUES (1, 17, 4);
 
--- -- Retrieving tickets for the user<id=3>
-SELECT t.order_id, t.show_id, s.subject, s.date_begins, s.date_ends, t.quantity, s.price*t.quantity AS cost
-
+-- -- Retrieving tickets for the user<id=2>
+SELECT t.order_id, t.show_id, t.date, s.subject,  t.quantity, s.price*t.quantity AS cost
 FROM tickets t
          JOIN users u ON t.user_id = u.id
          JOIN shows s ON t.show_id = s.id
-
-WHERE u.id = 3;
+WHERE u.id = 2;
 
 
 -- --Retrieving room list for shows

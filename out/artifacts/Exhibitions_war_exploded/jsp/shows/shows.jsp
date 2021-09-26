@@ -24,7 +24,7 @@
             <th>Delete</th>
         </c:if>
         <c:if test="${currentUser.role eq 'user'}">
-            <th>Buy</th>
+            <th>Buy tickets</th>
         </c:if>
     </tr>
     <c:forEach var="show" items="${shows}" varStatus="theCount">
@@ -47,7 +47,13 @@
             <c:if test="${currentUser.role eq 'user'}">
                 <td>
                     <form name="buyTicket" action="buy.ticket" method="post">
-                        <select id="number" name="quantity">
+
+                        <label for="date">Date:</label><br>
+                        <input type="date" id="date" name="date"
+                               value=${show.dateBegins} min=${show.dateBegins} max=${show.dateEnds}>
+
+                        <label for="quantity">Q-ty:</label>
+                        <select id="quantity" name="quantity">
                             <option value="1" selected="selected">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -55,6 +61,8 @@
                         </select>
                         <input type="hidden" name="showId" value="${show.id}">
                         <input type="submit" value="buy">
+
+
                     </form>
                 </td>
             </c:if>

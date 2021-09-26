@@ -32,10 +32,14 @@ public class BuyTicketServlet extends HttpServlet {
         int userId = currentUser.getId();
         int showId = Integer.parseInt(request.getParameter("showId"));
         int quantity = Integer.parseInt(request.getParameter("quantity"));
+        String date=request.getParameter("date");
+
+        //*******************************
+
 
         TicketsDAO ticketsDAO = TicketsDAO.getInstance();
         try {
-            ticketsDAO.buyTicket(userId, showId, quantity);
+            ticketsDAO.buyTicket(userId, showId, quantity,date);
         } catch (DaoException e) {
             log.error("Catching DaoException: " + e.getMessage());
             request.setAttribute("errorMessage", e.getMessage());
