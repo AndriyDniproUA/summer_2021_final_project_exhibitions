@@ -22,6 +22,25 @@
     </session-config>
 
 
+
+    <!--            *********************   ADDITIONAL FILE MAPPING   ********************             -->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.css</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.jpg</url-pattern>
+    </servlet-mapping>
+
+
     <!--            *********************   FILTERS   ********************             -->
     <filter>
         <filter-name>CharacterSetFilter</filter-name>
@@ -53,6 +72,28 @@
         <filter-name>Add show input validation</filter-name>
         <url-pattern>/add.show</url-pattern>
     </filter-mapping>
+
+    <!-- *********************  Personal cabinet  ********************             -->
+    <servlet>
+        <servlet-name>Personal Cabinet</servlet-name>
+        <servlet-class>ua.dp.exhibitions.web.cabinet.PersonalCabinetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Personal Cabinet</servlet-name>
+        <url-pattern>/personal.cabinet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Personal Cabinet Update</servlet-name>
+        <servlet-class>ua.dp.exhibitions.web.cabinet.PersonalCabinetUpdateUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Personal Cabinet Update</servlet-name>
+        <url-pattern>/personal.cabinet.update</url-pattern>
+    </servlet-mapping>
+
+
+
 
 
     <!-- *********************  USERS servlets  ********************             -->
@@ -101,16 +142,6 @@
         <servlet-name>Update User</servlet-name>
         <url-pattern>/update.user</url-pattern>
     </servlet-mapping>
-
-    <servlet>
-        <servlet-name>Personal Cabinet</servlet-name>
-        <servlet-class>ua.dp.exhibitions.web.users.PersonalCabinetServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Personal Cabinet</servlet-name>
-        <url-pattern>/personal.cabinet</url-pattern>
-    </servlet-mapping>
-
 
     <servlet>
         <servlet-name>GetUsers</servlet-name>

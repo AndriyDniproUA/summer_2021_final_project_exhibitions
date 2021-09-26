@@ -4,12 +4,12 @@
 
 <html>
 <head>
-    <title>Personal shows</title>
+    <title>Display shows</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 <%@include file="/jsp/pageHead.jsp" %>
-<h3>Personal shows</h3>
+<h3>Shows List</h3>
 <table class="styled-table">
     <tr>
         <th>No.</th>

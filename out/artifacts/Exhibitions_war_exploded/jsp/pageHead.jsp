@@ -9,23 +9,6 @@
             </form>
         </td>
 
-<c:if test="${empty sessionScope.currentUser}">
-        <td>
-            <form action="login">
-                <input type="submit" value="Login"/>
-            </form>
-        </td>
-</c:if>
-
-
-<c:if test="${not empty sessionScope.currentUser}">
-        <td>
-            <form action="logout">
-                <input type="submit" value="Logout"/>
-            </form>
-        </td>
-</c:if>
-
         <c:if test="${sessionScope.currentUser.role eq 'admin'}">
             <td>
                 <form action="users">
@@ -39,6 +22,7 @@
                 </form>
             </td>
         </c:if>
+
         <c:if test="${sessionScope.currentUser.role eq 'user'}">
             <td>
                 <form action="personal.cabinet">
@@ -46,6 +30,7 @@
                 </form>
             </td>
         </c:if>
+
         <c:if test="${not empty sessionScope.currentUser}">
             <td>
                 Current user: ${sessionScope.currentUser.login}
@@ -57,9 +42,21 @@
             </td>
         </c:if>
 
+        <c:if test="${empty sessionScope.currentUser}">
+            <td>
+                <form action="login">
+                    <input type="submit" value="Login"/>
+                </form>
+            </td>
+        </c:if>
 
-
-
+        <c:if test="${not empty sessionScope.currentUser}">
+            <td>
+                <form action="logout">
+                    <input type="submit" value="Logout"/>
+                </form>
+            </td>
+        </c:if>
     </tr>
 </table>
 

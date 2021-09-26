@@ -21,11 +21,6 @@ public class BuyTicketServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        ShowsDAO showsDAO = ShowsDAO.getInstance();
-
-//        Map<String, Integer> allRooms = showsDAO.getAllRooms();
-//        request.setAttribute("allRooms", allRooms);
-//        request.getRequestDispatcher("jsp/shows/add_show.jsp").forward(request, response);
     }
 
 
@@ -35,8 +30,8 @@ public class BuyTicketServlet extends HttpServlet {
         User currentUser = (User) request.getSession().getAttribute("currentUser");
 
         int userId = currentUser.getId();
-        int quantity = Integer.parseInt(request.getParameter("quantity"));
         int showId = Integer.parseInt(request.getParameter("showId"));
+        int quantity = Integer.parseInt(request.getParameter("quantity"));
 
         TicketsDAO ticketsDAO = TicketsDAO.getInstance();
         try {

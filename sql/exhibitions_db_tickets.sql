@@ -4,6 +4,7 @@ CREATE TABLE tickets
     user_id  INTEGER,
     show_id  INTEGER,
     quantity INTEGER NOT NULL,
+    date   TIMESTAMP NOT NULL,
 
     PRIMARY KEY (order_id),
     CONSTRAINT fk_user_id
@@ -14,17 +15,18 @@ CREATE TABLE tickets
 
 -- Populating table tickets
 INSERT INTO tickets (user_id, show_id, quantity)
-VALUES
-       (1, 17, 4);
+VALUES (1, 17, 4);
 
---
--- -- Retrieving shows and rooms info
--- SELECT s.id, s.subject, s.date_begins, r.room
--- FROM shows s
---          JOIN shows_rooms s_r ON s.id = s_r.show_id
---          JOIN rooms r ON r.id = s_r.room_id
--- ;
---
+-- -- Retrieving tickets for the user<id=3>
+SELECT t.order_id, t.show_id, s.subject, s.date_begins, s.date_ends, t.quantity, s.price*t.quantity AS cost
+
+FROM tickets t
+         JOIN users u ON t.user_id = u.id
+         JOIN shows s ON t.show_id = s.id
+
+WHERE u.id = 3;
+
+
 -- --Retrieving room list for shows
 -- select room from(
 -- SELECT s.id, s.subject, r.room

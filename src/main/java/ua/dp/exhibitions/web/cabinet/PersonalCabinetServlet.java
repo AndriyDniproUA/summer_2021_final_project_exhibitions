@@ -1,4 +1,4 @@
-package ua.dp.exhibitions.web.users;
+package ua.dp.exhibitions.web.cabinet;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -21,7 +21,8 @@ public class PersonalCabinetServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        request.getRequestDispatcher("jsp/users/personal_cabinet.jsp").forward(request, response);
+        log.debug("Before redirect to personal_cabinet jsp");
+        request.getRequestDispatcher("jsp/cabinet/personal_cabinet.jsp").forward(request, response);
     }
 
     @Override
