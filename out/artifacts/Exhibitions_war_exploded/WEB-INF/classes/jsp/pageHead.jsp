@@ -1,6 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 
 <c:if test="${not empty param.locale}">
@@ -8,30 +5,29 @@
     <c:set var="currentLocale" value="${param.locale}" scope="session"/>
 </c:if>
 
-<fmt:setBundle basename="lables"/>
-
+<fmt:setBundle basename="labels"/>
 
 <table class="styled-table">
     <tr>
         <td>
-            <h1>Shows central</h1>
+            <h1><fmt:message key="pageHead_jsp.label.site_name"/></h1>
         </td>
         <td>
             <form action="display.shows">
-                <input type="submit" value="SHOWS"/>
+                <input type="submit" value="<fmt:message key='pageHead_jsp.button.shows'/>"/>
             </form>
         </td>
 
         <c:if test="${sessionScope.currentUser.role eq 'admin'}">
             <td>
                 <form action="users">
-                    <input type="submit" value="User List"/>
+                    <input type="submit" value="<fmt:message key='pageHead_jsp.button.users'/>"/>
                 </form>
             </td>
 
             <td>
                 <form action="add.show">
-                    <input type="submit" value="Add show"/>
+                    <input type="submit" value="<fmt:message key='pageHead_jsp.button.add_show'/>"/>
                 </form>
             </td>
         </c:if>
@@ -39,18 +35,19 @@
         <c:if test="${sessionScope.currentUser.role eq 'user'}">
             <td>
                 <form action="personal.cabinet">
-                    <input type="submit" value="Personal cabinet"/>
+                    <input type="submit" value="<fmt:message key='pageHead_jsp.button.personal_cabinet'/>"/>
                 </form>
             </td>
         </c:if>
 
         <c:if test="${not empty sessionScope.currentUser}">
             <td>
-                Current user: ${sessionScope.currentUser.login}
-                Role: ${sessionScope.currentUser.role}
+
+                <fmt:message key='pageHead_jsp.label.current_user'/>:${sessionScope.currentUser.login}
+                <fmt:message key='pageHead_jsp.label.role'/>: ${sessionScope.currentUser.role}
 
                 <c:if test="${sessionScope.currentUser.role eq 'user'}">
-                    Balance: ${sessionScope.currentUser.balance}
+                    <fmt:message key='pageHead_jsp.label.balance'/>: ${sessionScope.currentUser.balance}
                 </c:if>
             </td>
         </c:if>
@@ -58,7 +55,7 @@
         <c:if test="${empty sessionScope.currentUser}">
             <td>
                 <form action="login">
-                    <input type="submit" value="Login"/>
+                    <input type="submit" value="<fmt:message key='pageHead_jsp.button.login'/>"/>
                 </form>
             </td>
         </c:if>
@@ -66,13 +63,13 @@
         <c:if test="${not empty sessionScope.currentUser}">
             <td>
                 <form action="logout">
-                    <input type="submit" value="Logout"/>
+                    <input type="submit" value="<fmt:message key='pageHead_jsp.button.logout'/>"/>
                 </form>
             </td>
         </c:if>
         <td>
             <form action="display.shows" method="post">
-                <fmt:message key="settings_jsp.label.set_locale"/>:
+                <fmt:message key='pageHead_jsp.label.language'/>:
                 <select name="locale">
                     <c:forEach items="${applicationScope.locales}" var="locale">
 
@@ -80,7 +77,6 @@
                             <c:set var="selected"
                                    value="${locale.key eq 'en' ? 'selected' : '' }"/>
                         </c:if>
-
                         <c:if test="${not empty currentLocale}">
                             <c:set var="selected"
                                    value="${locale.key eq currentLocale ? 'selected' : '' }"/>
@@ -90,13 +86,13 @@
                             ${selected}>${locale.value}</option>
                     </c:forEach>
                 </select>
-                <input type="submit" value=
-                        "<fmt:message key='settings_jsp.form.submit_save_locale'/>">
+                <input type="submit" value="<fmt:message key='pageHead_jsp.button.language'/>">
             </form>
-            current locale: ${currentLocale}
         </td>
     </tr>
 </table>
+
+
 
 
 

@@ -1,14 +1,15 @@
+<%@include file="/jspf/head.jspf" %>
 
 <html>
 <head>
-  <title>Warning</title>
+  <title>Error</title>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 <%@include file="/jsp/pageHead.jsp"%>
 
 <div class="error">
-<h2>ERROR!</h2><br>
+<h2><fmt:message key='error_jsp.label.error'/>!</h2><br>
 </div>
 
 <div class="error">
@@ -17,3 +18,5 @@
 
 </body>
 </html>
+
+

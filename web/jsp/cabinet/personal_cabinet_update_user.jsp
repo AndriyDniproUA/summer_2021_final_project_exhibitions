@@ -1,3 +1,4 @@
+<%@include file="/jspf/head.jspf" %>
 
 <html>
 <head>
@@ -9,12 +10,12 @@
 <body>
 <%@include file="/jsp/pageHead.jsp" %>
 
-<h2>You may update your personal information below:</h2><br>
+<h2><fmt:message key='personal_cabinet_update_user_jsp.label.update_personal_info'/>:</h2><br>
 <form action="personal.cabinet" method="post" onsubmit="return validateRegistrationForm()">
     <table class="styled-table">
         <tr>
             <td>
-                <label for="login">Login:</label><br>
+                <label for="login"><fmt:message key='personal_cabinet_update_user_jsp.label.login'/>:</label><br>
             </td>
             <td>
                 <input type="text" id="login" name="login" value="${currentUser.login}"><br>
@@ -23,7 +24,7 @@
         </tr>
         <tr>
             <td>
-                Your role is:
+                <fmt:message key='personal_cabinet_update_user_jsp.label.your_role'/>:
             </td>
             <td>
                 ${currentUser.role}<br>
@@ -31,7 +32,7 @@
         </tr>
         <tr>
             <td>
-                <label for="password">Password:</label>
+                <label for="password"><fmt:message key='personal_cabinet_update_user_jsp.label.password'/>:</label>
             </td>
             <td>
                 <input type="password" id="password" name="password" value="${currentUser.password}"><br>
@@ -39,7 +40,7 @@
         </tr>
         <tr>
             <td>
-                <label for="password2">Confirm password:</label>
+                <label for="password2"><fmt:message key='personal_cabinet_update_user_jsp.label.confirm_password'/>:</label>
             </td>
             <td>
                 <input type="password" id="password2" name="password2" value="${currentUser.password}"><br>
@@ -47,7 +48,7 @@
         </tr>
         <tr>
             <td>
-                Deposit your account:
+                <fmt:message key='personal_cabinet_update_user_jsp.label.deposit_account'/>:
             </td>
             <td>
                 <select id="deposit" name="deposit">
@@ -65,10 +66,11 @@
             <td>
             </td>
             <td>
-                <input type="submit" value="Submit">
+                <input type="submit" value="<fmt:message key='personal_cabinet_update_user_jsp.button.submit'/>">
             </td>
         </tr>
     </table>
 </form>
 </body>
 </html>
+

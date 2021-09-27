@@ -24,8 +24,5 @@ public class ContextListener implements ServletContextListener {
         }
 
         context.setAttribute("locales", locales);
-        //********************************
-        locales.list(System.out);
-        //********************************
     }
 }

@@ -1,3 +1,4 @@
+<%@include file="/jspf/head.jspf" %>
 
 <html>
 <head>
@@ -6,7 +7,7 @@
 </head>
 <body>
 <%@include file="/jsp/pageHead.jsp"%>
-<h2>WARNING!</h2><br>
+<h2><fmt:message key='warning_shows_jsp.label.warning'/>!</h2><br>
 
 <div class="warning">
 <c:forEach var="message" items="${messageList}">
@@ -20,3 +21,5 @@
 
 
 </html>
+
+

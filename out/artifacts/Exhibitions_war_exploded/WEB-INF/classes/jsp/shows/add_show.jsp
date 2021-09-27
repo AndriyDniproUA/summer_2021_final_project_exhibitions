@@ -1,3 +1,4 @@
+<%@include file="/jspf/head.jspf" %>
 
 <html>
 <head>
@@ -8,12 +9,12 @@
 
 <body>
 <%@include file="/jsp/pageHead.jsp" %>
-<h2>Add show</h2><br>
+<h2><fmt:message key='add_show_jsp.label.add_show'/></h2><br>
 <form name="addShow" action="add.show" method="post" onsubmit="return validateAddShowForm()">
     <table class="styled-table">
         <tr>
             <td>
-                <label for="subject">Subject of the show:</label>
+                <label for="subject"><fmt:message key='add_show_jsp.label.subject'/>:</label>
             </td>
             <td>
                 <input type="text" id="subject" name="subject">
@@ -21,7 +22,7 @@
         </tr>
         <tr>
             <td>
-                <label for="date_begins">Start date:</label>
+                <label for="date_begins"><fmt:message key='add_show_jsp.label.start_date'/>:</label>
             </td>
             <td>
                 <input type="date" id="date_begins" name="date_begins" value="2021-09-21">
@@ -29,7 +30,7 @@
         </tr>
         <tr>
             <td>
-                <label for="date_ends">End date:</label>
+                <label for="date_ends"><fmt:message key='add_show_jsp.label.end_date'/>:</label>
             </td>
             <td>
                 <input type="date" id="date_ends" name="date_ends" value="2021-09-25">
@@ -37,7 +38,7 @@
         </tr>
         <tr>
             <td>
-                <label for="time_opens">Time opens:</label>
+                <label for="time_opens"><fmt:message key='add_show_jsp.label.time_opens'/>:</label>
             </td>
             <td>
                 <input type="time" id="time_opens" name="time_opens" value="08:00">
@@ -46,7 +47,7 @@
 
         <tr>
             <td>
-                <label for="time_closes">Time closes:</label><br>
+                <label for="time_closes"><fmt:message key='add_show_jsp.label.time_closes'/>:</label><br>
 
             </td>
             <td>
@@ -55,7 +56,7 @@
         </tr>
         <tr>
             <td>
-                <label for="price">Ticket price:</label><br>
+                <label for="price">  <fmt:message key='add_show_jsp.label.ticket_price'/>:</label><br>
             </td>
             <td>
                 <select id="price" name="price">
@@ -79,11 +80,9 @@
             </td>
         </tr>
         </c:if>
-
-
         <tr>
             <td>
-                Select rooms:<br>
+                <fmt:message key='add_show_jsp.label.select_rooms'/>:<br>
             </td>
             <td>
                 <c:forEach var="room" items="${allRooms}">
@@ -94,10 +93,10 @@
         </tr>
         <tr>
             <td>
-                <input type="reset" value="Reset">
+                <input type="reset" value="<fmt:message key='add_show_jsp.button.reset'/>">
             </td>
             <td>
-                <input type="submit" value="Submit">
+                <input type="submit" value="<fmt:message key='add_show_jsp.button.submit'/>">
             </td>
         </tr>
     </table>

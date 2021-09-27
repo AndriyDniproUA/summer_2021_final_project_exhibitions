@@ -1,3 +1,4 @@
+<%@include file="/jspf/head.jspf" %>
 
 <html>
 <head>
@@ -8,18 +9,19 @@
 
 <body>
 <%@include file="/jsp/pageHead.jsp"%>
-<h2>Please register</h2><br>
+<h2><fmt:message key='register_jsp.label.please_register'/></h2><br>
 <form action="register" method="post" onsubmit="return validateRegistrationForm()">
-    <label for="login">Login:</label><br>
+    <label for="login"><fmt:message key='register_jsp.label.login'/>:</label><br>
     <input type="text" id="login" name="login"><br>
 
-    <label for="password">Password:</label><br>
+    <label for="password"><fmt:message key='register_jsp.label.password'/>:</label><br>
     <input type="password" id="password" name="password"><br>
 
-    <label for="password2">Confirm password:</label><br>
+    <label for="password2"><fmt:message key='register_jsp.label.confirm_password'/>:</label><br>
     <input type="password" id="password2" name="password2">
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="<fmt:message key='register_jsp.button.submit'/>">
 </form>
 </body>
 </html>
+

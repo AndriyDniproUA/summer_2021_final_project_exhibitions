@@ -1,4 +1,4 @@
-
+<%@include file="/jspf/head.jspf" %>
 
 <html>
 <head>
@@ -7,7 +7,7 @@
 </head>
 <body>
 <%@include file="/jsp/pageHead.jsp"%>
-<h2>INFORMATION</h2><br>
+<h2><fmt:message key='information_jsp.label.information'/></h2><br>
 <h3>${message}</h3>
 
 </body>

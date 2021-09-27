@@ -29,7 +29,6 @@
     </listener>
 
 
-
     <!--            *********************   DATABASE CONNECTION POOL  ********************             -->
     <resource-ref>
         <description>postgreSQL Datasource</description>
