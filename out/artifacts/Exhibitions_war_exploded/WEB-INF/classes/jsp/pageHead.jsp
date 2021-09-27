@@ -1,5 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+
+<c:if test="${not empty param.locale}">
+    <fmt:setLocale value="${param.locale}" scope="session"/>
+    <c:set var="currentLocale" value="${param.locale}" scope="session"/>
+</c:if>
+
+<fmt:setBundle basename="lables"/>
+
 
 <table class="styled-table">
     <tr>
@@ -60,6 +70,31 @@
                 </form>
             </td>
         </c:if>
+        <td>
+            <form action="display.shows" method="post">
+                <fmt:message key="settings_jsp.label.set_locale"/>:
+                <select name="locale">
+                    <c:forEach items="${applicationScope.locales}" var="locale">
+
+                        <c:if test="${empty currentLocale}">
+                            <c:set var="selected"
+                                   value="${locale.key eq 'en' ? 'selected' : '' }"/>
+                        </c:if>
+
+                        <c:if test="${not empty currentLocale}">
+                            <c:set var="selected"
+                                   value="${locale.key eq currentLocale ? 'selected' : '' }"/>
+                        </c:if>
+
+                        <option value="${locale.key}"
+                            ${selected}>${locale.value}</option>
+                    </c:forEach>
+                </select>
+                <input type="submit" value=
+                        "<fmt:message key='settings_jsp.form.submit_save_locale'/>">
+            </form>
+            current locale: ${currentLocale}
+        </td>
     </tr>
 </table>
 

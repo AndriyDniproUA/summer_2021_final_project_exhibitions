@@ -35,6 +35,7 @@ public class GetSingleShowServlet extends HttpServlet {
         try {
             show = showsDAO.getShowById(show_id);
             shows.add(show);
+
         } catch (DaoException e) {
             log.trace("Catching DaoException: " + e.getMessage());
             request.setAttribute("errorMessage", e.getMessage());
