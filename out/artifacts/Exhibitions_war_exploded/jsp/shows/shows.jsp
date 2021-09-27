@@ -1,6 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 
 <html>
 <head>
@@ -66,8 +63,6 @@
                         </select>
                         <input type="hidden" name="showId" value="${show.id}">
                         <input type="submit" value="buy">
-
-
                     </form>
                 </td>
             </c:if>

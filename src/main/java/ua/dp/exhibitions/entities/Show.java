@@ -1,10 +1,11 @@
 package ua.dp.exhibitions.entities;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-public class Show {
+public class Show implements Serializable {
     private int id;
     private String Subject;
     private LocalDate dateBegins;

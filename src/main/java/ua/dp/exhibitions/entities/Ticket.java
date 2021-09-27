@@ -1,9 +1,9 @@
 package ua.dp.exhibitions.entities;
 
+import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalTime;
 
-public class Ticket {
+public class Ticket implements Serializable {
     private int order_id;
     private int show_id;
     private LocalDate date;

@@ -173,6 +173,6 @@ public class TicketsDAO {
             DbUtil.close(con);
         }
 
-        /qreturn totalNumber;
+        return totalNumber;
     }
 }

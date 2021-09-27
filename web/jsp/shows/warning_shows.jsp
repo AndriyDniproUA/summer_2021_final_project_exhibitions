@@ -1,7 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-
 
 <html>
 <head>
@@ -19,9 +15,6 @@
 
 <h3>${message}</h3>
 </div>
-
-<%--<a href="display.shows">See all shows</a><br>--%>
-<%--<a href="login">Login</a>--%>
 
 </body>
 
