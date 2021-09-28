@@ -11,7 +11,8 @@
 <%@include file="/jsp/pageHead.jsp" %>
 
 <h2><fmt:message key='personal_cabinet_update_user_jsp.label.update_personal_info'/>:</h2><br>
-<form action="personal.cabinet" method="post" onsubmit="return validateRegistrationForm()">
+<%--<form action="personal.cabinet.update" method="post" onsubmit="return validateRegistrationForm()">--%>
+<form action="update.user" method="post" onsubmit="return validateRegistrationForm()">
     <table class="styled-table">
         <tr>
             <td>
@@ -20,6 +21,7 @@
             <td>
                 <input type="text" id="login" name="login" value="${currentUser.login}"><br>
                 <input type="hidden" id="userId" name="id" value="${currentUser.id}"><br>
+                <input type="hidden" id="userRole" name="role" value="${currentUser.role}"><br>
             </td>
         </tr>
         <tr>
@@ -40,7 +42,8 @@
         </tr>
         <tr>
             <td>
-                <label for="password2"><fmt:message key='personal_cabinet_update_user_jsp.label.confirm_password'/>:</label>
+                <label for="password2"><fmt:message
+                        key='personal_cabinet_update_user_jsp.label.confirm_password'/>:</label>
             </td>
             <td>
                 <input type="password" id="password2" name="password2" value="${currentUser.password}"><br>
@@ -61,7 +64,10 @@
             </td>
         </tr>
 
-        <tr><td></td><td></td></tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
         <tr>
             <td>
             </td>

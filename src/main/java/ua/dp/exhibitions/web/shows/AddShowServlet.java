@@ -56,7 +56,12 @@ public class AddShowServlet extends HttpServlet {
                 request.setAttribute("messageList", validationFeedback);
                 request.getRequestDispatcher("jsp/warning.jsp").forward(request, response);
             } else {
-                request.setAttribute("message", "Show " + subject + " was added successfully to the shows database");
+                String messageBeg =
+                        Util.internationalizeMessage(request, "add_show_servlet.message_beg")+" ";
+                String messageEnd =
+                        " "+ Util.internationalizeMessage(request, "add_show_servlet.message_end");
+
+                request.setAttribute("message", messageBeg + subject + messageEnd);
                 request.getRequestDispatcher("jsp/information.jsp").forward(request, response);
             }
         }

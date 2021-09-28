@@ -38,7 +38,6 @@
     </resource-ref>
 
 
-
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
@@ -80,9 +79,19 @@
         <url-pattern>/add.show</url-pattern>
         <url-pattern>/delete.show</url-pattern>
         <url-pattern>/delete.user</url-pattern>
-        <url-pattern>/update.user</url-pattern>
+        <!--        <url-pattern>/update.user</url-pattern>-->
         <url-pattern>/users</url-pattern>
     </filter-mapping>
+
+    <filter>
+        <filter-name>Update user access</filter-name>
+        <filter-class>ua.dp.exhibitions.filters.UpdateUserFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Update user access</filter-name>
+        <url-pattern>/update.user</url-pattern>
+    </filter-mapping>
+
 
     <filter>
         <filter-name>Add show input validation</filter-name>
@@ -205,7 +214,6 @@
         <servlet-name>Display A Single Show</servlet-name>
         <url-pattern>/display.single.show</url-pattern>
     </servlet-mapping>
-
 
 
     <servlet>

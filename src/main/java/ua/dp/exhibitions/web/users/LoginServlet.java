@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import ua.dp.exhibitions.dao.UserDAO;
 import ua.dp.exhibitions.entities.User;
 import ua.dp.exhibitions.exceptions.DaoException;
+import ua.dp.exhibitions.utils.Util;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -51,9 +52,11 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("currentUser", currentUser);
             request.getRequestDispatcher("jsp/welcome.jsp").forward(request, response);
-
         } else {
-            request.setAttribute("message","Please check your login and password!");
+            String message =
+                    Util.internationalizeMessage(request, "login_servlet.message");
+
+            request.setAttribute("message",message);
             request.getRequestDispatcher("jsp/warning.jsp").forward(request, response);
         }
     }

@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ua.dp.exhibitions.dao.ShowsDAO;
 import ua.dp.exhibitions.exceptions.DaoException;
+import ua.dp.exhibitions.utils.Util;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -36,7 +37,14 @@ public class DeleteShowServlet extends HttpServlet {
             request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
         }
 
-        String message = "Show " + id + " was successfully removed from the Shows table";
+        String messageBeg =
+                Util.internationalizeMessage(request, "delete_show_servlet.message_beg")+" ";
+        String messageEnd =
+                " "+ Util.internationalizeMessage(request, "delete_show_servlet.message_end");
+
+
+
+        String message = messageBeg + id + messageEnd;
         log.trace(message);
         request.setAttribute("message", message);
         request.getRequestDispatcher("jsp/information.jsp").forward(request, response);
