@@ -9,15 +9,16 @@ import ua.dp.exhibitions.daoUtil.UserDaoUtil;
 import ua.dp.exhibitions.entities.Ticket;
 import ua.dp.exhibitions.entities.User;
 import ua.dp.exhibitions.exceptions.DaoException;
+import ua.dp.exhibitions.utils.Util;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class PersonalCabinetServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(PersonalCabinetServlet.class);
@@ -40,12 +41,12 @@ public class PersonalCabinetServlet extends HttpServlet {
         }
         request.setAttribute("tickets", tickets);
 
-
         request.getRequestDispatcher("jsp/cabinet/personal_cabinet.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         User currentUser = (User) request.getSession().getAttribute("currentUser");
         int userId = currentUser.getId();
         String roleAsString = currentUser.getRole();
@@ -79,7 +80,9 @@ public class PersonalCabinetServlet extends HttpServlet {
 
 
         log.trace("User ID:" + userId + " was successfully updated");
-        String message = "Your data was successfully updated";
+        String message = Util.internationalizeMessage(request,"personal_cabinet_servlet.message.data_was_updated");
+
+
 
         try {
             currentUser = userDAO.getUserById(userId);

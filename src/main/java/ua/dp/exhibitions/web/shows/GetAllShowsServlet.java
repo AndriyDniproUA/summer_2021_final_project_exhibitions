@@ -5,13 +5,20 @@ import org.apache.logging.log4j.Logger;
 import ua.dp.exhibitions.dao.ShowsDAO;
 import ua.dp.exhibitions.entities.Show;
 import ua.dp.exhibitions.exceptions.DaoException;
+import ua.dp.exhibitions.utils.Util;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Locale;
+import java.util.Properties;
+import java.util.ResourceBundle;
 
 public class GetAllShowsServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(GetAllShowsServlet.class);
@@ -24,6 +31,7 @@ public class GetAllShowsServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         log.debug("in GetAllShowsServlet doPost");
         ShowsDAO showsDAO = ShowsDAO.getInstance();
 

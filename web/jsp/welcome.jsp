@@ -9,6 +9,6 @@
 <%@include file="/jsp/pageHead.jsp"%>
 
 <h2><fmt:message key='welcome_jsp.label.welcome'/> ${currentUser.login}</h2><br>
-Your current role is: <c:out value="${currentUser.role}"/><br><br>
+<fmt:message key='welcome_jsp.label.current_role'/>: <c:out value="${currentUser.role}"/><br><br>
 </body>
 </html>

@@ -17,7 +17,7 @@
     <input type="text" id="login" name="login" value="nick"><br>
     <label for="password"><fmt:message key='login_jsp.label.password'/>:</label><br>
     <input type="password" id="password" name="password" value="111">
-    <input type="submit" value="Submit">
+    <input type="submit" value="<fmt:message key='login_jsp.button.submit'/>">
 
 </form>
 <br><br>
