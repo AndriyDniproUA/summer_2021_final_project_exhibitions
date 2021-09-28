@@ -6,7 +6,6 @@
 
     <display-name>Exhibitions</display-name>
 
-
     <!--            *********************   INTERNATIONALIZATION  ********************             -->
 
     <context-param>
@@ -28,6 +27,29 @@
         <listener-class>ua.dp.exhibitions.listeners.ContextListener</listener-class>
     </listener>
 
+    <!--            *********************   LOG4J SETUP  ********************             -->
+    <context-param>
+        <param-name>isLog4jAutoInitializationDisabled</param-name>
+        <param-value>true</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.apache.logging.log4j.web.Log4jServletContextListener</listener-class>
+    </listener>
+
+    <filter>
+        <filter-name>log4jServletFilter</filter-name>
+        <filter-class>org.apache.logging.log4j.web.Log4jServletFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>log4jServletFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>ERROR</dispatcher>
+        <dispatcher>ASYNC</dispatcher><!-- Servlet 3.0 w/ disabled auto-initialization only; not supported in 2.5 -->
+    </filter-mapping>
 
     <!--            *********************   DATABASE CONNECTION POOL  ********************             -->
     <resource-ref>

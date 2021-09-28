@@ -2,7 +2,6 @@ package ua.dp.exhibitions.daoUtil;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ua.dp.exhibitions.dao.ShowsDAO;
 import ua.dp.exhibitions.dao.TicketsDAO;
 import ua.dp.exhibitions.datasource.CustomDataSource;
 import ua.dp.exhibitions.entities.Show;
