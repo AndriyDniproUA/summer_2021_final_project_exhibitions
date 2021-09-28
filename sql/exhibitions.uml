@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>912e648f-3010-4b3e-9914-bd86b6c75871.DATABASE:exhibitions</OriginalElement>
+  <nodes>
+    <node x="-64.0" y="183.0">912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.users</node>
+    <node x="174.0" y="-49.0">912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.shows</node>
+    <node x="268.25" y="401.5">912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.shows_rooms</node>
+    <node x="442.0" y="83.0">912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.rooms</node>
+    <node x="100.75" y="368.0">912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.tickets</node>
+    <node x="-48.0" y="-24.0">912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.roles</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.shows_rooms" target="912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.rooms" relationship="REFERENCES">
+      <point x="30.75" y="-39.0" />
+      <point x="360.5" y="343.0" />
+      <point x="504.0" y="343.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.users" target="912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.roles" relationship="REFERENCES">
+      <point x="0.0" y="-72.5" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.shows_rooms" target="912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.shows" relationship="REFERENCES">
+      <point x="-30.75" y="-39.0" />
+      <point x="299.0" y="343.0" />
+      <point x="254.5" y="343.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.tickets" target="912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.users" relationship="REFERENCES">
+      <point x="-30.25" y="-72.5" />
+      <point x="131.0" y="343.0" />
+      <point x="10.0" y="343.0" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.tickets" target="912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.shows" relationship="REFERENCES">
+      <point x="30.25" y="-72.5" />
+      <point x="191.5" y="343.0" />
+      <point x="254.5" y="343.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="236.5" y="256.5" />
+  <SelectedNodes>
+    <node>912e648f-3010-4b3e-9914-bd86b6c75871.TABLE:exhibitions.public.rooms</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
