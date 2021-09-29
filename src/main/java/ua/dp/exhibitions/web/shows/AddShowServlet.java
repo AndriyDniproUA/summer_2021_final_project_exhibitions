@@ -17,6 +17,10 @@ import java.time.LocalTime;
 import java.util.List;
 import java.util.Map;
 
+
+/**
+ * AddShowServlet handles add show page
+ */
 public class AddShowServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(AddShowServlet.class);
 

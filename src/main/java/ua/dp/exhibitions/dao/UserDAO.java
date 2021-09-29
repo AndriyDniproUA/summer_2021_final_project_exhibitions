@@ -12,12 +12,18 @@ import java.sql.*;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * UserDAO provides access to user records in the database
+ */
 public class UserDAO {
     private static final Logger log = LogManager.getLogger(UserDAO.class);
     private static UserDAO instance;
 
     private UserDAO(){}
 
+    /**
+     * getInstance() returns a single instance of the UserDAO (singleton)
+     */
     public static UserDAO getInstance(){
         if (instance == null) {
             instance = new UserDAO();
@@ -25,6 +31,9 @@ public class UserDAO {
         return instance;
     }
 
+    /**
+     * getAllUsers() returns a list of all users
+     */
     public List<User> getAllUsers () throws DaoException {
         log.debug("Calling getAllUsers in UserDAO");
 
@@ -56,6 +65,9 @@ public class UserDAO {
     }
 
 
+    /**
+     * getUserByLogin() returns a user by login
+     */
     public User getUserByLogin(String login) throws DaoException {
         User user = null;
 
@@ -86,6 +98,10 @@ public class UserDAO {
         return user;
     }
 
+
+    /**
+     * getUserById() returns a user by id
+     */
     public User getUserById(int id) throws DaoException {
         User user = null;
 
@@ -117,6 +133,9 @@ public class UserDAO {
     }
 
 
+    /**
+     * addUser() adds a user
+     */
     public void addUser(User user) throws DaoException{
         Connection con=null;
         PreparedStatement ps=null;
@@ -143,6 +162,10 @@ public class UserDAO {
         }
     }
 
+
+    /**
+     * updateUser() updates a user
+     */
     public boolean updateUser(int userId, Map<String, String> params) throws DaoException{
         Connection con=null;
         PreparedStatement ps=null;
@@ -174,56 +197,10 @@ public class UserDAO {
     }
 
 
-//    public boolean updateUser(String userLogin, Map<String, String> params) throws DaoException{
-//        Connection con=null;
-//        PreparedStatement ps=null;
-//
-//        try {
-//            String sql="UPDATE users SET login=?, password=?, role=? WHERE login = ?";
-//            con = CustomDataSource.getConnection();
-//
-//            ps = con.prepareStatement(sql);
-//            ps.setString(1, params.get("login"));
-//            ps.setString(2, params.get("password"));
-//            ps.setInt(3, Integer.parseInt(params.get("role")));
-//            ps.setString(4, userLogin);
-//
-//            ps.execute();
-//            log.trace("User " + userLogin+" successfully updated");
-//
-//        } catch (SQLException e) {
-//            log.error(e.getMessage());
-//            throw new DaoException("Unable to update user: "+userLogin+" in the database!",e);
-////            return false;
-//        } finally {
-//            DbUtil.close(ps);
-//            DbUtil.close(con);
-//        }
-//        return true;
-//    }
 
-//    public void deleteUserByLogin(String login) throws DaoException {
-//        Connection con=null;
-//        PreparedStatement ps=null;
-//
-//        try {
-//            String sql = "DELETE FROM users WHERE login=?";
-//            con = CustomDataSource.getConnection();
-//            ps = con.prepareStatement(sql);
-//            ps.setString(1, login);
-//            ps.execute();
-//
-//        } catch (SQLException e) {
-//            log.error(e.getMessage());
-//            throw new DaoException("Unable to delete user: "+login+" in the database!",e);
-//
-//        } finally {
-//            DbUtil.close(ps);
-//            DbUtil.close(con);
-//        }
-//        log.trace("User " + login+" was deleted from the users table");
-//    }
-
+    /**
+     * deleteUserById() deletes user by id
+     */
     public void deleteUserById(int userId) throws DaoException {
         Connection con=null;
         PreparedStatement ps=null;

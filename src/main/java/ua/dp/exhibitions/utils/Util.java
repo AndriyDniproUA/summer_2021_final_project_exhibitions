@@ -7,6 +7,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+
+/**
+ * Util provides String to date conversion
+ * provides a method to internationalise messages in Servlets
+ */
 public class Util {
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 

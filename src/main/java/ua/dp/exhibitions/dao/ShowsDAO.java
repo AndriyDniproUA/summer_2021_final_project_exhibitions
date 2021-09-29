@@ -12,6 +12,9 @@ import ua.dp.exhibitions.daoUtil.ShowsDaoUtil;
 import java.sql.*;
 import java.util.*;
 
+/**
+ * ShowsDAO provides access to show records in the database
+ */
 public class ShowsDAO {
     private static final Logger log = LogManager.getLogger(ShowsDAO.class);
     private static ShowsDAO instance;
@@ -19,6 +22,9 @@ public class ShowsDAO {
     private ShowsDAO() {
     }
 
+    /**
+     * getInstance() returns a single instance of the ShowsDAO (singleton)
+     */
     public static ShowsDAO getInstance() {
         if (instance == null) {
             instance = new ShowsDAO();
@@ -26,6 +32,10 @@ public class ShowsDAO {
         return instance;
     }
 
+    /**
+     * getSelectedShows() returns a sorted (by date/by name/by price)
+     * and filtered (by single date) list of shows
+     */
     public List<Show> getSelectedShows(String orderBy, String someDate) throws DaoException{
         log.debug("Calling getShows(with parameters) in ShowsDAO");
         List<Show> shows;
@@ -53,6 +63,9 @@ public class ShowsDAO {
         return shows;
     }
 
+    /**
+     * getAllShows() returns a sorted a list of shows
+     */
     public List<Show> getAllShows() throws DaoException{
         log.debug("Calling getAllShows in ShowsDAO");
         List<Show> shows = new ArrayList<>();
@@ -80,6 +93,10 @@ public class ShowsDAO {
         return shows;
     }
 
+
+    /**
+     * getShowById() returns a single show by ID
+     */
     public Show getShowById(int id) throws DaoException{
         log.debug("Calling getShowById in ShowsDAO");
 
@@ -108,6 +125,9 @@ public class ShowsDAO {
     }
 
 
+    /**
+     * addShow() adds a new show to the database
+     */
     public List<String> addShow(Show show) throws DaoException{
         Connection con = null;
         PreparedStatement ps = null;
@@ -149,6 +169,10 @@ public class ShowsDAO {
         return validationFeedback;
     }
 
+
+    /**
+     * deleteShow() deletes show from the database by ID
+     */
     public void deleteShow(int id) throws DaoException{
         Connection con = null;
         PreparedStatement ps = null;

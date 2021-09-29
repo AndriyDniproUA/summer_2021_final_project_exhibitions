@@ -11,12 +11,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * DbUtil supports database handling close() and rollback() methods
+ */
 public class DbUtil {
     private static final Logger log = LogManager.getLogger(DbUtil.class);
 
-    public static void close(AutoCloseable ac){
+    public static void close(AutoCloseable ac) {
         try {
-            if (ac!=null) {
+            if (ac != null) {
                 ac.close();
             }
         } catch (Exception e) {
@@ -24,7 +27,7 @@ public class DbUtil {
         }
     }
 
-    public static void rollback(Connection con){
+    public static void rollback(Connection con) {
         if (con != null) {
             try {
                 con.rollback();
@@ -33,13 +36,6 @@ public class DbUtil {
             }
         }
     }
-
-
-
-
-
-
-
 
 
 }

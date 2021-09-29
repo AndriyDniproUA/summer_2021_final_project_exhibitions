@@ -14,9 +14,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
+/**
+ * ShowsDaoUtil provides support method for TicketDAO
+ */
 public class TicketsDaoUtil {
     private static final Logger log = LogManager.getLogger(TicketsDaoUtil.class);
 
+    /**
+     * mapTickets() returns a list of tickets from the result set
+     */
     public static List<Ticket> mapTickets(ResultSet rs) throws SQLException {
         log.debug("Calling mapTickets in TicketsDAOUtil");
         List<Ticket> tickets = new ArrayList<>();

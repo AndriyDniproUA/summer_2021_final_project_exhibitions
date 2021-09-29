@@ -15,9 +15,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * ShowsDaoUtil provides support methods for ShowsDAO
+ */
 public class ShowsDaoUtil {
     private static final Logger log = LogManager.getLogger(ShowsDaoUtil.class);
 
+    /**
+     * mapRooms() fetches room names from result set
+     */
     public static String[] mapRooms(ResultSet rs) throws SQLException {
         log.debug("Calling mapRooms in ShowsDaoUtil");
         List<String> rooms = new ArrayList<>();
@@ -30,6 +36,10 @@ public class ShowsDaoUtil {
         return rooms.toArray(roomsArray);
     }
 
+
+    /**
+     * getAllRooms() fetches map of all rooms (name->id) from the DB
+     */
     public static Map<String, Integer> getAllRooms() {
         log.debug("Calling getAllRooms in ShowsDaoUtil");
 
@@ -61,6 +71,11 @@ public class ShowsDaoUtil {
         return rooms;
     }
 
+
+    /**
+     * getAllRooms() returns list of shows from the result set
+     *
+     */
     public static List<Show> mapShows(ResultSet rs) throws SQLException {
         TicketsDAO ticketsDAO=TicketsDAO.getInstance();
 
@@ -97,6 +112,9 @@ public class ShowsDaoUtil {
         return shows;
     }
 
+    /**
+     * getShowRooms() returns array of rooms by show id
+     */
     private static String[] getShowRooms(int id) {
         log.debug("Calling getShowRooms in ShowsDaoUtil");
 
@@ -129,6 +147,11 @@ public class ShowsDaoUtil {
         return null;
     }
 
+    /**
+     * combineSqlForShowSearch() produces sql request to fetch shows using
+     * specified ordering and specified date
+     * input parameters may be null
+     */
     public static String combineSqlForShowSearch(String orderBy, String someDate) {
         log.debug("combineSqlForShowSearch() in ShowsDaoUtil");
 
@@ -151,13 +174,15 @@ public class ShowsDaoUtil {
                     break;
             }
         }
-
         if (someDate != null && !"".equals(someDate)) {
             datesSql = " WHERE date_begins<='" + someDate + "' AND date_ends>='" + someDate + "'";
         }
         return sql + datesSql + orderSql;
     }
 
+    /**
+     * bookRooms() inserts a record into shows_rooms table when creating a new show
+     */
     public static void bookRooms(Show show, Connection con) {
         PreparedStatement ps = null;
 
@@ -185,6 +210,9 @@ public class ShowsDaoUtil {
         }
     }
 
+    /**
+     * setShowIdByDb() sets show id using value from the database
+     */
     public static void setShowIdByDb(Show show, PreparedStatement ps) {
         try (ResultSet resultSet = ps.getGeneratedKeys()) {
             if (resultSet.next()) {

@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
+/**
+ * DeleteShowServlet handles delete show page
+ */
 public class DeleteShowServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(DeleteShowServlet.class);
 

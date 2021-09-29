@@ -1,5 +1,3 @@
-
-
 <c:if test="${not empty param.locale}">
     <fmt:setLocale value="${param.locale}" scope="session"/>
     <c:set var="currentLocale" value="${param.locale}" scope="session"/>
@@ -89,9 +87,11 @@
                 <input type="submit" value="<fmt:message key='pageHead_jsp.button.language'/>">
             </form>
         </td>
+        <td>
+            <mine:today/>
+        </td>
     </tr>
 </table>
-
 
 
 

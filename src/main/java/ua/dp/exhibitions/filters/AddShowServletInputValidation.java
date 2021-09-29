@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.Map;
 
+/**
+ * AddShowServletInputValidation is a filter class
+ * checks if any room for a new show has been selected
+ */
 public class AddShowServletInputValidation implements Filter {
     private static final Logger log = LogManager.getLogger(AddShowServletInputValidation.class);
     @Override

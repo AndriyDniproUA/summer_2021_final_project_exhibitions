@@ -15,6 +15,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+/**
+ * GetSingleShowServlet handles single show page
+ */
 public class GetSingleShowServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(GetSingleShowServlet.class);
 

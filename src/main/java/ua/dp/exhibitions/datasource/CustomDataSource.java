@@ -10,6 +10,9 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+/**
+ * CustomDataSource provides connection to the database
+ */
 public class CustomDataSource {
     private static Context envCtx;
     private static DataSource ds;
@@ -25,9 +28,9 @@ public class CustomDataSource {
     }
 
 
-
-
-
+    /**
+     * getConnection() provides  connection to DB
+     */
     public static Connection getConnection() throws SQLException {
         return ds.getConnection();
     }

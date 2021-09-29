@@ -11,6 +11,12 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+
+/**
+ * ContextListener is a listener class
+ * which initializes internationalization by loading locales from properties file
+ * also initializes log4j log file location
+ */
 public class ContextListener implements ServletContextListener {
 
     public void contextInitialized(ServletContextEvent event) {

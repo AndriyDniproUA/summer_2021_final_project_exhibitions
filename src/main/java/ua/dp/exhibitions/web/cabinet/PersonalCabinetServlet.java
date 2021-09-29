@@ -20,6 +20,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * PersonalCabinetServlet handles personal cabinet
+ */
 public class PersonalCabinetServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(PersonalCabinetServlet.class);
 

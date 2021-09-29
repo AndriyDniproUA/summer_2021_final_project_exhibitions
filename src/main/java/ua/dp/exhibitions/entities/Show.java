@@ -5,6 +5,9 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
+/**
+ * Show is a class used to transfer data about shows
+ */
 public class Show implements Serializable {
     private int id;
     private String Subject;

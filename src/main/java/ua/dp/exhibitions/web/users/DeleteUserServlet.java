@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
+/**
+ * DeleteUserServlet handles user delete by admin
+ */
 public class DeleteUserServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(DeleteUserServlet.class);
 

@@ -20,6 +20,10 @@ import java.util.Locale;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
+
+/**
+ * GetAllShowsServlet handles shows page
+ */
 public class GetAllShowsServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(GetAllShowsServlet.class);
 

@@ -3,6 +3,10 @@ package ua.dp.exhibitions.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+
+/**
+ * User is a class used to transfer data about users
+ */
 public class User implements Serializable {
     private int id;
     private String login;

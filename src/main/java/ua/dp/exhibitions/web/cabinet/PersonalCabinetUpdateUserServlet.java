@@ -16,6 +16,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * PersonalCabinetUpdateUserServlet handles personal cabinet update page
+ */
 public class PersonalCabinetUpdateUserServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(PersonalCabinetUpdateUserServlet.class);
 

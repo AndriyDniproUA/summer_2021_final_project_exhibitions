@@ -15,6 +15,9 @@ import ua.dp.exhibitions.utils.Util;
 import java.sql.*;
 import java.util.List;
 
+/**
+ * TicketsDAO provides access to ticket records in the database
+ */
 public class TicketsDAO {
     private static final Logger log = LogManager.getLogger(TicketsDAO.class);
     private static TicketsDAO instance;
@@ -22,6 +25,9 @@ public class TicketsDAO {
     private TicketsDAO() {
     }
 
+    /**
+     * getInstance() returns a single instance of the TicketsDAO (singleton)
+     */
     public static TicketsDAO getInstance() {
         if (instance == null) {
             instance = new TicketsDAO();
@@ -30,6 +36,9 @@ public class TicketsDAO {
     }
 
 
+    /**
+     * buyTicket() implements a purchase of tickets to a show
+     */
     public void buyTicket(int userId, int showId, int quantity, String date) throws DaoException {
         Connection con = null;
 
@@ -53,6 +62,9 @@ public class TicketsDAO {
 
     }
 
+    /**
+     * writeIntoTicketsTable() insert records into tickets table
+     */
     private void writeIntoTicketsTable(int userId, int showId, int quantity, String date, Connection con) throws DaoException {
         PreparedStatement ps = null;
 
@@ -79,6 +91,9 @@ public class TicketsDAO {
         }
     }
 
+    /**
+     * subtractFromUserBalance() reduces user balance by value of the purchased tickets
+     */
     private void subtractFromUserBalance(int userId, int showId, int quantity, Connection con) throws DaoException {
         ShowsDAO showsDAO = ShowsDAO.getInstance();
         Show show = showsDAO.getShowById(showId);
@@ -108,6 +123,10 @@ public class TicketsDAO {
         }
     }
 
+
+    /**
+     * getTicketsByUserId() returns a list of tickets purchased by a user with ID: user_id
+     */
     public List<Ticket> getTicketsByUserId(int user_id) throws DaoException{
         log.debug("Calling getTicketsByUserId in TicketsDAO");
         List<Ticket> tickets=null;
@@ -141,6 +160,9 @@ public class TicketsDAO {
         return tickets;
     }
 
+    /**
+     * countTicketsByShowId() returns a total number of tickets sold for the show with ID:show_id
+     */
     public int countTicketsByShowId(int show_id) throws DaoException{
         log.debug("Calling countTicketsByShowId in TicketsDAO");
 

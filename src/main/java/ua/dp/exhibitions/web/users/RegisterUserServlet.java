@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * RegisterUserServlet handles registration page
+ */
 public class RegisterUserServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(RegisterUserServlet.class);
 

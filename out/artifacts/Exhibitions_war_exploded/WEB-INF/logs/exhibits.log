@@ -64,4 +64,640 @@
 ""02:46:12.623 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
 ""02:46:12.623 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
 ""02:46:12.624 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:24.287 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:11:24.298 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:11:24.299 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:11:24.517 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:11:24.519 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:24.677 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:24.679 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:24.683 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:24.684 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:24.684 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:24.685 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:24.686 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:24.686 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:24.687 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:24.688 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:24.688 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:26.688 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:11:26.688 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:11:26.688 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:11:26.691 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:11:26.692 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:26.698 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:26.698 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:26.703 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:26.706 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:26.707 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:26.711 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:26.713 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:26.714 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:26.718 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:26.720 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:26.720 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:30.457 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:11:30.458 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:11:30.458 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:11:30.460 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:11:30.461 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:30.462 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:30.462 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:30.463 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:30.464 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:30.464 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:30.465 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:30.465 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:30.465 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:30.466 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:30.466 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:30.466 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:38.218 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.daoUtil.UserDaoUtil - Calling mapUsers in UserDaoUtil
+""11:11:45.146 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getAllRooms in ShowsDaoUtil
+""11:11:52.010 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:11:52.010 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:11:52.010 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:11:52.011 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:11:52.012 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:52.013 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:52.013 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:52.014 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:52.014 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:52.015 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:52.015 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:52.016 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:52.016 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:11:52.017 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:11:52.017 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:11:52.017 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:12:08.535 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:12:08.535 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:12:08.535 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:12:08.536 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:12:08.536 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:12:08.537 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:12:08.537 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:12:08.538 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:12:08.538 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:12:08.538 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:12:08.539 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:12:08.539 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:12:08.539 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:12:08.540 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:12:08.540 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:12:08.540 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:12:12.577 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:12:12.577 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:12:12.577 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:12:12.578 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:12:12.578 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:12:12.579 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:12:12.579 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:12:12.580 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:12:12.581 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:12:12.581 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:12:12.582 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:12:12.583 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:12:12.583 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:12:12.584 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:12:12.584 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:12:12.584 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:32.740 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:13:32.751 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:13:32.752 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:13:32.911 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:13:32.912 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:32.960 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:32.962 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:32.964 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:32.965 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:32.965 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:32.966 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:32.967 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:32.967 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:32.968 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:32.968 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:32.968 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:34.330 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:13:34.333 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:13:34.333 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:13:34.335 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:13:34.335 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:34.339 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:34.340 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:34.347 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:34.348 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:34.348 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:34.350 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:34.351 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:34.351 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:34.352 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:34.353 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:34.354 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:37.537 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:13:37.537 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:13:37.537 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:13:37.538 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:13:37.539 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:37.540 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:37.540 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:37.541 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:37.541 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:37.541 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:37.542 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:37.543 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:37.543 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:37.543 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:37.544 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:37.544 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:42.962 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:13:42.963 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:13:42.963 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:13:42.964 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:13:42.965 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:42.966 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:42.966 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:42.967 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:42.967 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:42.967 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:42.968 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:42.969 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:42.969 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:42.970 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:42.971 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:42.971 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:45.234 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:13:45.234 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:13:45.234 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:13:45.235 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:13:45.236 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:45.236 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:45.236 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:45.237 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:45.237 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:45.238 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:45.238 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:45.238 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:45.238 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:45.239 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:45.239 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:45.239 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:49.947 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.daoUtil.UserDaoUtil - Calling mapUsers in UserDaoUtil
+""11:13:52.361 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:13:52.361 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:13:52.361 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:13:52.363 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:13:52.363 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:52.364 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:52.364 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:52.365 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:52.366 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:52.366 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:52.367 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:52.367 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:52.367 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:13:52.368 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:13:52.368 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:13:52.368 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:43:55.222 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:43:55.231 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:43:55.232 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:43:55.520 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:43:55.522 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:43:55.567 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:43:55.567 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:43:55.569 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:43:55.571 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:43:55.571 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:43:55.571 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:43:55.572 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:43:55.572 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:43:55.573 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:43:55.573 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:43:55.573 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:43:55.873 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:43:55.873 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:43:55.874 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:43:55.875 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:43:55.877 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:43:55.880 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:43:55.880 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:43:55.883 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:43:55.885 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:43:55.885 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:43:55.887 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:43:55.888 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:43:55.888 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:43:55.890 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:43:55.893 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:43:55.894 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:47:19.139 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:47:19.148 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:47:19.149 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:47:19.320 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:47:19.322 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:47:19.472 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:47:19.474 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:47:19.476 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:47:19.476 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:47:19.476 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:47:19.477 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:47:19.478 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:47:19.478 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:47:19.479 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:47:19.480 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:47:19.480 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:47:20.837 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:47:20.837 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:47:20.839 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:47:20.843 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:47:20.843 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:47:20.846 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:47:20.846 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:47:20.848 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:47:20.850 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:47:20.850 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:47:20.851 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:47:20.852 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:47:20.853 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:47:20.854 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:47:20.855 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:47:20.855 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:47:25.544 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:47:25.545 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:47:25.545 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:47:25.546 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:47:25.546 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:47:25.547 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:47:25.547 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:47:25.548 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:47:25.549 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:47:25.549 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:47:25.549 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:47:25.550 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:47:25.550 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:47:25.551 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:47:25.551 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:47:25.551 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:49:03.837 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:49:03.847 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:49:03.849 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:49:04.141 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:49:04.143 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:49:04.263 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:49:04.264 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:49:04.266 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:49:04.267 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:49:04.267 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:49:04.268 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:49:04.269 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:49:04.269 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:49:04.269 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:49:04.270 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:49:04.270 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:49:04.486 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:49:04.486 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:49:04.487 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:49:04.489 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:49:04.490 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:49:04.492 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:49:04.492 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:49:04.494 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:49:04.495 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:49:04.496 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:49:04.499 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:49:04.501 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:49:04.501 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:49:04.503 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:49:04.503 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:49:04.503 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:54:07.778 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:54:07.787 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:54:07.787 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:54:07.946 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:54:07.947 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:54:07.993 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:54:07.994 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:54:07.996 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:54:07.997 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:54:07.997 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:54:07.998 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:54:07.998 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:54:07.999 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:54:07.999 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:54:08.000 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:54:08.000 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:54:08.213 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:54:08.213 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:54:08.214 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:54:08.215 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:54:08.216 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:54:08.217 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:54:08.218 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:54:08.219 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:54:08.220 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:54:08.221 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:54:08.222 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:54:08.223 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:54:08.224 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:54:08.225 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:54:08.227 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:54:08.227 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:55:39.934 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:55:39.942 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:55:39.943 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:55:40.107 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:55:40.109 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:55:40.154 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:55:40.155 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:55:40.158 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:55:40.159 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:55:40.159 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:55:40.160 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:55:40.160 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:55:40.160 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:55:40.161 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:55:40.162 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:55:40.162 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:55:40.356 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:55:40.357 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:55:40.357 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:55:40.358 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:55:40.359 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:55:40.362 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:55:40.363 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:55:40.364 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:55:40.365 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:55:40.365 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:55:40.366 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:55:40.367 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:55:40.367 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:55:40.368 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:55:40.369 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:55:40.369 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:58:56.741 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:58:56.751 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:58:56.751 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:58:56.917 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:58:56.918 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:58:56.968 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:58:56.969 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:58:56.971 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:58:56.972 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:58:56.972 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:58:56.973 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:58:56.974 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:58:56.974 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:58:56.975 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:58:56.976 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:58:56.976 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:58:57.194 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""11:58:57.197 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""11:58:57.198 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""11:58:57.200 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""11:58:57.200 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:58:57.202 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:58:57.202 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:58:57.204 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:58:57.204 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:58:57.205 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:58:57.207 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:58:57.208 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:58:57.209 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""11:58:57.210 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""11:58:57.212 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""11:58:57.214 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:23:40.216 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""12:23:40.225 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""12:23:40.226 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""12:23:40.393 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""12:23:40.395 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:23:40.546 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:23:40.547 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:23:40.549 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:23:40.550 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:23:40.550 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:23:40.551 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:23:40.551 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:23:40.551 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:23:40.552 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:23:40.553 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:23:40.553 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:23:41.895 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""12:23:41.896 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""12:23:41.896 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""12:23:41.897 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""12:23:41.899 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:23:41.902 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:23:41.902 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:23:41.904 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:23:41.907 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:23:41.908 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:23:41.910 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:23:41.912 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:23:41.912 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:23:41.913 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:23:41.914 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:23:41.915 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:33:29.985 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""12:33:29.994 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""12:33:29.995 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""12:33:30.152 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""12:33:30.153 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:33:30.198 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:33:30.199 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:33:30.202 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:33:30.203 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:33:30.204 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:33:30.204 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:33:30.205 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:33:30.206 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:33:30.207 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:33:30.207 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:33:30.207 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:33:31.553 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""12:33:31.553 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""12:33:31.553 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""12:33:31.555 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""12:33:31.555 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:33:31.556 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:33:31.557 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:33:31.559 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:33:31.562 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:33:31.563 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:33:31.565 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:33:31.566 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:33:31.566 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:33:31.567 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:33:31.568 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:33:31.568 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:09.756 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""12:35:09.764 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""12:35:09.765 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""12:35:09.925 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""12:35:09.927 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:09.973 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:09.974 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:09.976 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:09.977 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:09.977 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:09.978 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:09.979 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:09.979 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:09.980 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:09.981 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:09.981 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:11.309 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""12:35:11.310 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""12:35:11.311 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""12:35:11.312 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""12:35:11.313 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:11.315 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:11.315 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:11.317 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:11.318 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:11.319 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:11.320 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:11.321 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:11.321 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:11.322 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:11.324 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:11.324 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:27.950 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""12:35:27.951 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""12:35:27.951 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""12:35:27.952 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""12:35:27.952 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:27.953 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:27.953 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:27.953 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:27.954 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:27.954 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:27.955 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:27.955 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:27.955 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:27.956 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:27.956 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:27.956 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:31.894 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""12:35:31.894 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""12:35:31.894 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""12:35:31.895 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""12:35:31.896 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:31.897 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:31.897 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:31.897 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:31.898 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:31.898 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:31.898 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:31.899 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:31.899 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:35:31.899 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:35:31.900 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:35:31.900 [http-nio-8080-exec-6] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:37:31.586 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""12:37:31.587 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""12:37:31.587 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""12:37:31.588 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""12:37:31.589 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:37:31.589 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:37:31.590 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:37:31.592 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:37:31.593 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:37:31.593 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:37:31.594 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:37:31.595 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:37:31.595 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:37:31.596 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:37:31.596 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:37:31.597 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:37:41.521 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""12:37:41.522 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""12:37:41.522 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""12:37:41.523 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""12:37:41.524 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:37:41.525 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:37:41.525 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:37:41.526 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:37:41.527 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:37:41.527 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:37:41.528 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:37:41.529 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:37:41.529 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""12:37:41.529 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""12:37:41.530 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""12:37:41.530 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:14.507 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""15:24:14.521 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""15:24:14.523 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""15:24:14.719 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""15:24:14.721 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:14.878 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:14.879 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:14.881 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:14.882 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:14.883 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:14.883 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:14.884 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:14.884 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:14.885 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:14.886 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:14.886 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:16.520 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""15:24:16.521 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""15:24:16.521 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""15:24:16.523 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""15:24:16.526 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:16.528 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:16.528 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:16.530 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:16.532 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:16.532 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:16.534 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:16.536 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:16.536 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:16.538 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:16.539 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:16.540 [http-nio-8080-exec-4] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:23.732 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""15:24:23.733 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""15:24:23.733 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""15:24:23.734 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""15:24:23.734 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:23.735 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:23.735 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:23.736 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:23.736 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:23.736 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:23.737 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:23.737 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:23.738 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:23.738 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:23.739 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:23.739 [http-nio-8080-exec-5] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:27.883 [http-nio-8080-exec-7] DEBUG ua.dp.exhibitions.daoUtil.UserDaoUtil - Calling mapUsers in UserDaoUtil
+""15:24:29.356 [http-nio-8080-exec-8] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getAllRooms in ShowsDaoUtil
+""15:24:32.492 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.dao.UserDAO - Calling getAllUsers in UserDAO
+""15:24:32.493 [http-nio-8080-exec-9] DEBUG ua.dp.exhibitions.daoUtil.UserDaoUtil - Calling mapUsers in UserDaoUtil
+""15:24:34.572 [http-nio-8080-exec-10] DEBUG ua.dp.exhibitions.daoUtil.UserDaoUtil - Calling mapUsers in UserDaoUtil
+""15:24:39.023 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.UserDaoUtil - Calling mapUsers in UserDaoUtil
+""15:24:39.035 [http-nio-8080-exec-1] DEBUG ua.dp.exhibitions.daoUtil.UserDaoUtil - Calling mapUsers in UserDaoUtil
+""15:24:40.091 [http-nio-8080-exec-2] DEBUG ua.dp.exhibitions.dao.UserDAO - Calling getAllUsers in UserDAO
+""15:24:40.092 [http-nio-8080-exec-2] DEBUG ua.dp.exhibitions.daoUtil.UserDaoUtil - Calling mapUsers in UserDaoUtil
+""15:24:59.435 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.web.shows.GetAllShowsServlet - in GetAllShowsServlet doPost
+""15:24:59.435 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.ShowsDAO - Calling getShows(with parameters) in ShowsDAO
+""15:24:59.435 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - combineSqlForShowSearch() in ShowsDaoUtil
+""15:24:59.437 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapShows in ShowsDAOUtil
+""15:24:59.438 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:59.439 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:59.439 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:59.440 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:59.441 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:59.441 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:59.442 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:59.442 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:59.442 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
+""15:24:59.443 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling getShowRooms in ShowsDaoUtil
+""15:24:59.443 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.daoUtil.ShowsDaoUtil - Calling mapRooms in ShowsDaoUtil
+""15:24:59.443 [http-nio-8080-exec-3] DEBUG ua.dp.exhibitions.dao.TicketsDAO - Calling countTicketsByShowId in TicketsDAO
 "

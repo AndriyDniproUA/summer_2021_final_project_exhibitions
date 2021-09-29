@@ -3,6 +3,9 @@ package ua.dp.exhibitions.entities;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+/**
+ * Ticket is a class used to transfer data about tickets
+ */
 public class Ticket implements Serializable {
     private int order_id;
     private int show_id;

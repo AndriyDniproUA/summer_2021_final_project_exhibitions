@@ -12,6 +12,10 @@ import java.io.IOException;
 
 import java.util.List;
 
+
+/**
+ * GetAllUsersServlet handles users page
+ */
 public class GetAllUsersServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(GetAllUsersServlet.class);
 

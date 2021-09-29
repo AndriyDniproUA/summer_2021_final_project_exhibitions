@@ -14,9 +14,17 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * UserDaoUtil provides support method for UserDAO
+ */
 public class UserDaoUtil {
     private static final Logger log = LogManager.getLogger(UserDaoUtil.class);
 
+
+
+    /**
+     * mapUsers() collects users list from the result set
+     */
     public static List<User> mapUsers(ResultSet rs) throws SQLException {
         log.debug("Calling mapUsers in UserDaoUtil");
 
@@ -35,6 +43,9 @@ public class UserDaoUtil {
         return users;
     }
 
+    /**
+     * getRoleIdByRoleName() returns role id by role name
+     */
     public static int getRoleIdByRoleName(String roleName) throws DaoException {
         Integer roleId=null;
 
@@ -64,6 +75,4 @@ public class UserDaoUtil {
         }
         return roleId;
     }
-
-
 }

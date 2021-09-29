@@ -9,6 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+
+/**
+ * UpdateUserFilter is a filter class
+ * limiting access to user data for administrators and owners of the personal cabinet
+ */
 public class UpdateUserFilter implements Filter {
     private static final Logger log = LogManager.getLogger(UpdateUserFilter.class);
 
@@ -22,9 +27,8 @@ public class UpdateUserFilter implements Filter {
         User currentUser = (User) session.getAttribute("currentUser");
         int userId = Integer.parseInt(request.getParameter("id"));
 
-
         if (currentUser == null || (!currentUser.getRole().equals("admin") && userId != currentUser.getId())) {
-            log.trace("A user was not allowed to use administrator privileges");
+            log.trace("Access denied to use administrator/owner privileges");
 
             String message = "This function is reserved for administrators and owners only!";
             request.setAttribute("message", message);

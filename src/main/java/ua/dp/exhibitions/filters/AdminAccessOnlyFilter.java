@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * AdminAccessOnlyFilter is a filter class
+ * limiting access to pages reserved for administrator
+ */
 public class AdminAccessOnlyFilter implements Filter{
     private static final Logger log = LogManager.getLogger(AdminAccessOnlyFilter.class);
     @Override

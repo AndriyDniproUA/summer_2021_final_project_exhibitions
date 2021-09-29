@@ -16,6 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * BuyTicketServlet handles ticket purchase
+ */
 public class BuyTicketServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(BuyTicketServlet.class);
 
