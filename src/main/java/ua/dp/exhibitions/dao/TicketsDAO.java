@@ -71,10 +71,6 @@ public class TicketsDAO {
         String sql = "INSERT INTO tickets (user_id, show_id, quantity, date)\n" +
                 "VALUES  (?, ?, ?, ?)";
 
-        ///***************************************
-        System.out.println("Date:"+date);
-        //****************************************
-
         try {
             ps = con.prepareStatement(sql);
             ps.setInt(1, userId);

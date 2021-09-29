@@ -19,12 +19,13 @@ public class UserDAO {
     private static final Logger log = LogManager.getLogger(UserDAO.class);
     private static UserDAO instance;
 
-    private UserDAO(){}
+    private UserDAO() {
+    }
 
     /**
      * getInstance() returns a single instance of the UserDAO (singleton)
      */
-    public static UserDAO getInstance(){
+    public static UserDAO getInstance() {
         if (instance == null) {
             instance = new UserDAO();
         }
@@ -32,33 +33,37 @@ public class UserDAO {
     }
 
     /**
-     * getAllUsers() returns a list of all users
+     * getAllUsers(limit, offset) returns a list of users per page
      */
-    public List<User> getAllUsers () throws DaoException {
-        log.debug("Calling getAllUsers in UserDAO");
+    public List<User> getAllUsers(int limit, int offset) throws DaoException {
+        log.debug("Calling getAllUsers(limit, offset) in UserDAO");
 
         List<User> users;
 
-        Connection con=null;
-        Statement st=null;
-        ResultSet rs=null;
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
 
         try {
             String sql = "SELECT u.id, u.login, u.password, r.role, u.balance FROM users u\n" +
-                    "JOIN roles r ON u.role=r.id";
+                    "JOIN roles r ON u.role=r.id LIMIT ? OFFSET ?";
 
             con = CustomDataSource.getConnection();
-            st = con.createStatement();
-            rs = st.executeQuery(sql);
+            ps = con.prepareStatement(sql);
+
+            ps.setInt(1, limit);
+            ps.setInt(2, offset);
+
+            rs = ps.executeQuery();
             users = UserDaoUtil.mapUsers(rs);
 
         } catch (SQLException e) {
             log.error(e.getMessage());
-            throw new DaoException("Unable to extract users from UserDAO!",e);
+            throw new DaoException("Unable to extract users from UserDAO!", e);
 
         } finally {
             DbUtil.close(rs);
-            DbUtil.close(st);
+            DbUtil.close(ps);
             DbUtil.close(con);
         }
         return users;
@@ -71,9 +76,9 @@ public class UserDAO {
     public User getUserByLogin(String login) throws DaoException {
         User user = null;
 
-        Connection con=null;
-        PreparedStatement ps=null;
-        ResultSet rs=null;
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
 
         try {
             String sql = "SELECT u.id, u.login, u.password, r.role, u.balance FROM users u JOIN roles r ON u.role=r.id WHERE u.login = ?";
@@ -84,12 +89,12 @@ public class UserDAO {
             rs = ps.executeQuery();
 
             List<User> users = UserDaoUtil.mapUsers(rs);
-            if (users.size()!=0) {
+            if (users.size() != 0) {
                 user = users.get(0);
             }
         } catch (SQLException e) {
             log.error(e.getMessage());
-            throw new DaoException("Unable to extract user: "+login+" from UserDAO!",e);
+            throw new DaoException("Unable to extract user: " + login + " from UserDAO!", e);
         } finally {
             DbUtil.close(rs);
             DbUtil.close(ps);
@@ -105,9 +110,9 @@ public class UserDAO {
     public User getUserById(int id) throws DaoException {
         User user = null;
 
-        Connection con=null;
-        PreparedStatement ps=null;
-        ResultSet rs=null;
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
 
         try {
             String sql = "SELECT u.id, u.login, u.password, r.role, u.balance FROM users u JOIN roles r ON u.role=r.id WHERE u.id = ?";
@@ -118,12 +123,12 @@ public class UserDAO {
             rs = ps.executeQuery();
 
             List<User> users = UserDaoUtil.mapUsers(rs);
-            if (users.size()!=0) {
+            if (users.size() != 0) {
                 user = users.get(0);
             }
         } catch (SQLException e) {
             log.error(e.getMessage());
-            throw new DaoException("Unable to extract user ID: "+id+" from UserDAO!",e);
+            throw new DaoException("Unable to extract user ID: " + id + " from UserDAO!", e);
         } finally {
             DbUtil.close(rs);
             DbUtil.close(ps);
@@ -136,10 +141,10 @@ public class UserDAO {
     /**
      * addUser() adds a user
      */
-    public void addUser(User user) throws DaoException{
-        Connection con=null;
-        PreparedStatement ps=null;
-        ResultSet rs=null;
+    public void addUser(User user) throws DaoException {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
 
         try {
 
@@ -149,11 +154,11 @@ public class UserDAO {
             ps.setString(1, user.getLogin());
             ps.setString(2, user.getPassword());
             ps.executeUpdate();
-            log.trace("User " + user.getLogin()+" added to the users table");
+            log.trace("User " + user.getLogin() + " added to the users table");
 
         } catch (SQLException e) {
             log.error(e.getMessage());
-            throw new DaoException("User: "+user.getLogin()+" already exists!",e);
+            throw new DaoException("User: " + user.getLogin() + " already exists!", e);
 
         } finally {
             DbUtil.close(rs);
@@ -166,28 +171,28 @@ public class UserDAO {
     /**
      * updateUser() updates a user
      */
-    public boolean updateUser(int userId, Map<String, String> params) throws DaoException{
-        Connection con=null;
-        PreparedStatement ps=null;
+    public boolean updateUser(int userId, Map<String, String> params) throws DaoException {
+        Connection con = null;
+        PreparedStatement ps = null;
 
 
         try {
-            String sql="UPDATE users SET login=?, password=?, role=?, balance=? WHERE id = ?";
+            String sql = "UPDATE users SET login=?, password=?, role=?, balance=? WHERE id = ?";
             con = CustomDataSource.getConnection();
 
             ps = con.prepareStatement(sql);
             ps.setString(1, params.get("login"));
             ps.setString(2, params.get("password"));
             ps.setInt(3, Integer.parseInt(params.get("role")));
-            ps.setDouble(4,Double.parseDouble(params.get("balance")));
+            ps.setDouble(4, Double.parseDouble(params.get("balance")));
             ps.setInt(5, userId);
 
             ps.execute();
-            log.trace("User ID:" + userId+" successfully updated");
+            log.trace("User ID:" + userId + " successfully updated");
 
         } catch (SQLException e) {
             log.error(e.getMessage());
-            throw new DaoException("Unable to update user ID: "+userId+" in the database!",e);
+            throw new DaoException("Unable to update user ID: " + userId + " in the database!", e);
 //            return false;
         } finally {
             DbUtil.close(ps);
@@ -196,14 +201,12 @@ public class UserDAO {
         return true;
     }
 
-
-
     /**
      * deleteUserById() deletes user by id
      */
     public void deleteUserById(int userId) throws DaoException {
-        Connection con=null;
-        PreparedStatement ps=null;
+        Connection con = null;
+        PreparedStatement ps = null;
 
         try {
             String sql = "DELETE FROM users WHERE id=?";
@@ -214,13 +217,44 @@ public class UserDAO {
 
         } catch (SQLException e) {
             log.error(e.getMessage());
-            throw new DaoException("Unable to delete user ID:"+userId,e);
+            throw new DaoException("Unable to delete user ID:" + userId, e);
 
         } finally {
             DbUtil.close(ps);
             DbUtil.close(con);
         }
-        log.trace("User ID:" + userId+" was deleted from the users table");
+        log.trace("User ID:" + userId + " was deleted from the users table");
+    }
+
+    /**
+     * getNoOfUsers() returns a total number of users
+     */
+    public int getNoOfUsers() throws DaoException {
+        log.debug("Calling getNoOfUsers in UserDAO");
+
+        Connection con = null;
+        Statement st = null;
+        ResultSet rs = null;
+
+        try {
+            String sql = "SELECT COUNT(id) FROM users";
+
+            con = CustomDataSource.getConnection();
+            st = con.createStatement();
+            rs = st.executeQuery(sql);
+            if (rs.next()) {
+                return rs.getInt("count");
+            }
+        } catch (SQLException e) {
+            log.error(e.getMessage());
+            throw new DaoException("Unable to get No of users from UserDAO!", e);
+
+        } finally {
+            DbUtil.close(rs);
+            DbUtil.close(st);
+            DbUtil.close(con);
+        }
+        return 0;
     }
 
 }

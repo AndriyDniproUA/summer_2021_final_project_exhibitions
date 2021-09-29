@@ -74,10 +74,9 @@ public class ShowsDaoUtil {
 
     /**
      * getAllRooms() returns list of shows from the result set
-     *
      */
     public static List<Show> mapShows(ResultSet rs) throws SQLException {
-        TicketsDAO ticketsDAO=TicketsDAO.getInstance();
+        TicketsDAO ticketsDAO = TicketsDAO.getInstance();
 
 
         log.debug("Calling mapShows in ShowsDAOUtil");
@@ -94,18 +93,18 @@ public class ShowsDaoUtil {
             show.setTimeOpens(LocalTime.parse(rs.getString("time_opens")));
             show.setTimeCloses(LocalTime.parse(rs.getString("time_closes")));
 
-            double price=rs.getDouble("price");
+            double price = rs.getDouble("price");
             show.setPrice(price);
             show.setRooms(getShowRooms(id));
 
-            int ticketsSold=0;
+            int ticketsSold = 0;
             try {
-                ticketsSold=ticketsDAO.countTicketsByShowId(id);
+                ticketsSold = ticketsDAO.countTicketsByShowId(id);
                 show.setTicketsSold(ticketsSold);
             } catch (DaoException e) {
                 log.debug(e.getMessage());
             }
-            show.setTotal(price*ticketsSold);
+            show.setTotal(price * ticketsSold);
 
             shows.add(show);
         }
@@ -152,7 +151,7 @@ public class ShowsDaoUtil {
      * specified ordering and specified date
      * input parameters may be null
      */
-    public static String combineSqlForShowSearch(String orderBy, String someDate) {
+    public static String combineSqlForShowSearch(String orderBy, String someDate, int limit, int offset) {
         log.debug("combineSqlForShowSearch() in ShowsDaoUtil");
 
         String sql = "SELECT id, subject, date_begins, date_ends, time_opens, time_closes, price FROM shows";
@@ -177,8 +176,47 @@ public class ShowsDaoUtil {
         if (someDate != null && !"".equals(someDate)) {
             datesSql = " WHERE date_begins<='" + someDate + "' AND date_ends>='" + someDate + "'";
         }
-        return sql + datesSql + orderSql;
+
+        //*******************************************
+        System.out.println(sql + datesSql + orderSql+" LIMIT " + limit + " OFFSET " + offset);
+        //*******************************************
+
+        return sql + datesSql + orderSql+" LIMIT " + limit + " OFFSET " + offset;
     }
+
+
+//    /**
+//     * combineSqlForShowSearch() produces sql request to fetch shows using
+//     * specified ordering and specified date
+//     * input parameters may be null
+//     */
+//    public static String combineSqlForShowSearch(String orderBy, String someDate) {
+//        log.debug("combineSqlForShowSearch() in ShowsDaoUtil");
+//
+//        String sql = "SELECT id, subject, date_begins, date_ends, time_opens, time_closes, price FROM shows";
+//        String orderSql = "";
+//        String datesSql = "";
+//
+//        if (orderBy == null) {
+//            orderSql = " ORDER BY id";
+//        } else {
+//            switch (orderBy) {
+//                case "bySubject":
+//                    orderSql = " ORDER BY subject";
+//                    break;
+//                case "byDate":
+//                    orderSql = " ORDER BY date_begins";
+//                    break;
+//                case "byPrice":
+//                    orderSql = " ORDER BY price";
+//                    break;
+//            }
+//        }
+//        if (someDate != null && !"".equals(someDate)) {
+//            datesSql = " WHERE date_begins<='" + someDate + "' AND date_ends>='" + someDate + "'";
+//        }
+//        return sql + datesSql + orderSql;
+//    }
 
     /**
      * bookRooms() inserts a record into shows_rooms table when creating a new show

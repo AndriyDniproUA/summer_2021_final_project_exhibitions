@@ -32,15 +32,16 @@ public class ShowsDAO {
         return instance;
     }
 
+
     /**
-     * getSelectedShows() returns a sorted (by date/by name/by price)
+     * getSelectedShows(limit, offset) returns a sorted (by date/by name/by price)
      * and filtered (by single date) list of shows
      */
-    public List<Show> getSelectedShows(String orderBy, String someDate) throws DaoException{
+    public List<Show> getSelectedShows(String orderBy, String someDate, int limit, int offset) throws DaoException{
         log.debug("Calling getShows(with parameters) in ShowsDAO");
         List<Show> shows;
 
-        String sql = ShowsDaoUtil.combineSqlForShowSearch(orderBy, someDate);
+        String sql = ShowsDaoUtil.combineSqlForShowSearch(orderBy, someDate, limit, offset);
 
         Connection con = null;
         Statement st = null;
@@ -194,5 +195,39 @@ public class ShowsDAO {
             DbUtil.close(con);
         }
         log.trace("Show id=" + id + " was deleted from the users table");
+    }
+
+    /**
+     * getNoOfShows() returns a total number of shows
+     */
+    public int getNoOfShows(String someDate) throws DaoException {
+        log.debug("Calling getNoOfShows in ShowsDAO");
+
+        Connection con=null;
+        Statement st=null;
+        ResultSet rs=null;
+
+        try {
+            String sql = "SELECT COUNT(id) FROM shows";
+            if (someDate != null && !"".equals(someDate)) {
+                sql += " WHERE date_begins<='" + someDate + "' AND date_ends>='" + someDate + "'";
+            }
+
+            con = CustomDataSource.getConnection();
+            st = con.createStatement();
+            rs = st.executeQuery(sql);
+            if (rs.next()){
+                return rs.getInt("count");
+            }
+        } catch (SQLException e) {
+            log.error(e.getMessage());
+            throw new DaoException("Unable to get No of shows from ShowsDAO!",e);
+
+        } finally {
+            DbUtil.close(rs);
+            DbUtil.close(st);
+            DbUtil.close(con);
+        }
+        return 0;
     }
 }

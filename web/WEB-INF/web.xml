@@ -190,9 +190,10 @@
         <url-pattern>/update.user</url-pattern>
     </servlet-mapping>
 
+
     <servlet>
         <servlet-name>GetUsers</servlet-name>
-        <servlet-class>ua.dp.exhibitions.web.users.GetAllUsersServlet</servlet-class>
+        <servlet-class>ua.dp.exhibitions.web.users.GetUsersServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GetUsers</servlet-name>
@@ -220,7 +221,7 @@
 
     <servlet>
         <servlet-name>Display all Shows</servlet-name>
-        <servlet-class>ua.dp.exhibitions.web.shows.GetAllShowsServlet</servlet-class>
+        <servlet-class>ua.dp.exhibitions.web.shows.GetShowsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Display all Shows</servlet-name>

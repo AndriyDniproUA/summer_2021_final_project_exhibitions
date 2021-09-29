@@ -30,7 +30,7 @@
     </tr>
     <c:forEach var="show" items="${shows}" varStatus="theCount">
         <tr>
-            <td>${theCount.count}</td>
+            <td>${itemNum}</td>
             <td>${show.subject}</td>
             <td>${show.dateBegins}</td>
             <td>${show.dateEnds}</td>
@@ -67,6 +67,7 @@
                 </td>
             </c:if>
         </tr>
+        <c:set var="itemNum" value="${itemNum+1}"/>
     </c:forEach>
 </table>
 <br/>
@@ -104,6 +105,36 @@
             </td>
         </tr>
     </table>
+
+    <table>
+        <tr>
+            <td>
+                <c:if test="${currentPage != 1}">
+                    <a href="display.shows?page=${currentPage - 1}"><fmt:message key='pagination.label.previous'/></a>
+                </c:if>
+            </td>
+
+            <c:forEach begin="1" end="${noOfPages}" var="i">
+                <td>
+                    <c:choose>
+                        <c:when test="${currentPage eq i}">
+                            ${i}
+                        </c:when>
+                        <c:otherwise>
+                            <a href="display.shows?page=${i}">${i}</a>
+                        </c:otherwise>
+                    </c:choose>
+                </td>
+            </c:forEach>
+
+            <td>
+                <c:if test="${currentPage lt noOfPages}">
+                    <a href="display.shows?page=${currentPage + 1}"><fmt:message key='pagination.label.next'/></a>
+                </c:if>
+            </td>
+        </tr>
+    </table>
+
 </form>
 </body>
 </html>
