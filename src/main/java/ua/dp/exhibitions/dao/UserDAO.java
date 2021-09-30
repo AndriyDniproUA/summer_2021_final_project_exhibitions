@@ -148,7 +148,7 @@ public class UserDAO {
 
         try {
 
-            String sql = "INSERT INTO users (login, password, role) VALUES (?, ?, 2)";
+            String sql = "INSERT INTO users (login, password, role, balance) VALUES (?, ?, 2, 0)";
             con = CustomDataSource.getConnection();
             ps = con.prepareStatement(sql);
             ps.setString(1, user.getLogin());
